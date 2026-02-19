@@ -5,6 +5,7 @@ import FeaturedProducts from '@/components/sections/FeaturedProducts';
 import WhyChamakSection from '@/components/sections/WhyChamak';
 import AboutSnapshot from '@/components/sections/AboutSnapshot';
 import Testimonial from '@/components/sections/Testimonial';
+import DealerCTA from '@/components/sections/DealerCTA';
 import CTAStrip from '@/components/sections/CTAStrip';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -27,6 +28,7 @@ export default function HomePage() {
             <WhyChamakSection />
             <AboutSnapshot />
             <Testimonial />
+            <DealerCTA />
             <CTAStrip />
         </>
     );

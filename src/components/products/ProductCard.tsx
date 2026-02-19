@@ -15,9 +15,9 @@ const feedTypeLabels: Record<string, string> = {
 };
 
 const feedTypeBg: Record<string, string> = {
-    floating: 'bg-teal/10 text-teal border-teal/20',
-    sinking: 'bg-steel/10 text-steel border-steel/20',
-    mash: 'bg-gold/10 text-gold border-gold/20',
+    floating: 'bg-teal border-teal text-white shadow-sm',
+    sinking: 'bg-navy border-navy text-white shadow-sm',
+    mash: 'bg-gold border-gold text-navy shadow-sm',
 };
 
 function getProteinDisplay(protein: ProductSpec['protein']): string {
@@ -73,15 +73,15 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     <div className="space-y-1.5">
                         <div className="flex items-center justify-between">
                             <span className="text-bodyGray text-xs flex items-center gap-1.5 font-[family-name:var(--font-bengali)]">
-                                <TrendingUp className="w-3 h-3 text-teal" /> প্রোটিন
+                                <TrendingUp className="w-3.5 h-3.5 text-teal" /> প্রোটিন
                             </span>
-                            <span className="text-teal text-xs font-semibold">{proteinDisplay}</span>
+                            <span className="text-teal font-bold text-base">{proteinDisplay}</span>
                         </div>
                         <div className="flex items-center justify-between">
                             <span className="text-bodyGray text-xs flex items-center gap-1.5 font-[family-name:var(--font-bengali)]">
-                                <Droplets className="w-3 h-3 text-steel" /> ফ্যাট
+                                <Droplets className="w-3.5 h-3.5 text-steel" /> ফ্যাট
                             </span>
-                            <span className="text-steel text-xs font-semibold">{product.fat}%</span>
+                            <span className="text-steel font-bold text-base">{product.fat}%</span>
                         </div>
                         <div className="flex items-center justify-between">
                             <span className="text-bodyGray text-xs flex items-center gap-1.5 font-[family-name:var(--font-bengali)]">

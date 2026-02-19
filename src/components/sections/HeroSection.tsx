@@ -4,17 +4,21 @@ import { ArrowRight, MessageCircle, ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-navy via-[#1e3a52] to-[#2a5a7a]">
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-10 left-10 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-10 right-10 w-80 h-80 bg-gold/10 rounded-full blur-3xl animate-pulse delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal/5 rounded-full blur-3xl" />
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-navy">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0">
+                <img
+                    src="https://images.unsplash.com/photo-1544551763-8dd44758c03e?q=80&w=2669&auto=format&fit=crop"
+                    alt="Fish feeding in a pond"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-                    <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,120 L0,120 Z" fill="#F8FAFA" />
-                </svg>
+            {/* Decorative blurs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-10 left-10 w-96 h-96 bg-teal/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-10 right-10 w-80 h-80 bg-gold/10 rounded-full blur-3xl animate-pulse delay-1000" />
             </div>
 
             <div className="container-custom relative z-10 py-24">
@@ -29,18 +33,18 @@ export default function HeroSection() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2, duration: 0.5 }}
-                            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
+                            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6 shadow-lg"
                         >
-                            <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-                            <span className="text-white/90 text-sm font-[family-name:var(--font-bengali)]">বেস্ট পদ্মা এগ্রো ফিডস</span>
+                            <span className="w-2.5 h-2.5 bg-gold rounded-full animate-pulse shadow-[0_0_10px_rgba(255,183,3,0.6)]" />
+                            <span className="text-white font-medium text-sm font-[family-name:var(--font-bengali)]">বেস্ট পদ্মা এগ্রো ফিডস</span>
                         </motion.div>
 
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.7 }}
-                            className="text-white font-bold leading-tight mb-4 font-[family-name:var(--font-bengali)]"
-                            style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
+                            className="text-white font-extrabold leading-[1.1] mb-6 font-[family-name:var(--font-bengali)] drop-shadow-lg"
+                            style={{ fontSize: 'clamp(48px, 6vw, 76px)' }}
                         >
                             চমক ফিশ ফিড
                         </motion.h1>
@@ -49,7 +53,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.7 }}
-                            className="text-gold font-semibold text-xl mb-5 font-[family-name:var(--font-bengali)]"
+                            className="text-gold font-bold text-2xl mb-6 font-[family-name:var(--font-bengali)] drop-shadow-md"
                         >
                             মাছ চাষির বিশ্বস্ত সঙ্গী
                         </motion.p>
@@ -58,7 +62,7 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.7 }}
-                            className="text-white/75 text-base leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0 font-[family-name:var(--font-bengali)]"
+                            className="text-white/85 text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-[family-name:var(--font-bengali)] drop-shadow"
                         >
                             রাজশাহীর ইনাম ফিড মিল থেকে উৎপাদিত উচ্চমানের মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি ভাসমান ও ডুবন্ত ফিড।
                         </motion.p>
@@ -67,15 +71,15 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.7 }}
-                            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                            className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
                         >
-                            <Link to="/products" className="btn-gold text-base px-8 py-3.5 rounded-xl justify-center">
+                            <Link to="/products" className="bg-gold hover:bg-white text-navy font-bold text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_4px_14px_0_rgba(255,183,3,0.39)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.23)] hover:-translate-y-1 font-[family-name:var(--font-bengali)]">
                                 আমাদের পণ্য দেখুন
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link
                                 to="/dealers"
-                                className="flex items-center gap-2 justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/25 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-200"
+                                className="flex items-center gap-2 justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-200 font-[family-name:var(--font-bengali)]"
                             >
                                 <MessageCircle className="w-5 h-5" />
                                 Dealer হন
@@ -86,42 +90,18 @@ export default function HeroSection() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8, duration: 0.7 }}
-                            className="flex flex-wrap items-center gap-4 mt-8 justify-center lg:justify-start"
+                            className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-10 justify-center lg:justify-start"
                         >
                             {['✓ উচ্চমানের উপাদান', '✓ নিজস্ব কারখানা', '✓ ২ ব্র্যান্ড'].map((badge) => (
-                                <span key={badge} className="text-white/60 text-sm font-[family-name:var(--font-bengali)]">
+                                <span key={badge} className="bg-navy/40 backdrop-blur-sm px-3 py-1 rounded-lg text-white/80 text-sm font-medium border border-white/10 font-[family-name:var(--font-bengali)]">
                                     {badge}
                                 </span>
                             ))}
                         </motion.div>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        className="hidden lg:flex items-center justify-center"
-                    >
-                        <div className="relative">
-                            <div className="w-80 h-80 rounded-full bg-gradient-to-br from-teal/30 to-steel/20 backdrop-blur-sm border border-white/15 flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-7xl mb-3">🐟</div>
-                                    <p className="text-white font-bold text-2xl font-[family-name:var(--font-bengali)]">চমক</p>
-                                    <p className="text-gold text-sm">Fish Feed</p>
-                                </div>
-                            </div>
-                            {[
-                                { icon: '🌊', label: 'ভাসমান ফিড', pos: 'top-0 -right-6' },
-                                { icon: '⬇️', label: 'ডুবন্ত ফিড', pos: 'bottom-4 -left-8' },
-                                { icon: '🧪', label: 'উচ্চ প্রোটিন', pos: '-top-4 left-4' },
-                            ].map((item) => (
-                                <div key={item.label} className={`absolute ${item.pos} bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-3 text-center`}>
-                                    <div className="text-2xl mb-1">{item.icon}</div>
-                                    <p className="text-white text-xs font-[family-name:var(--font-bengali)]">{item.label}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
+                    {/* Right side - simplified or removed illustration to let background shine */}
+                    <div className="hidden lg:block"></div>
                 </div>
             </div>
 
@@ -129,10 +109,10 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
-                className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/40 flex flex-col items-center gap-1"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 flex flex-col items-center gap-2 pointer-events-none"
             >
-                <span className="text-xs font-[family-name:var(--font-bengali)]">নিচে স্ক্রল করুন</span>
-                <ChevronDown className="w-5 h-5 animate-bounce" />
+                <span className="text-xs font-[family-name:var(--font-bengali)] tracking-widest uppercase">Scroll Down</span>
+                <ChevronDown className="w-6 h-6 animate-bounce" />
             </motion.div>
         </section>
     );

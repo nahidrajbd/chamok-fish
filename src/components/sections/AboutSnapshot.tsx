@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
+import feedsPond from '@/images/feeds-pond.jpg';
 
 export default function AboutSnapshot() {
     return (
@@ -18,8 +19,8 @@ export default function AboutSnapshot() {
                         {/* Factory Image */}
                         <div className="aspect-[4/3] rounded-card overflow-hidden shadow-lg border border-border/40 group relative">
                             <img
-                                src="https://images.unsplash.com/photo-1626262967267-33a763878772?q=80&w=2670&auto=format&fit=crop"
-                                alt="Inam Feed Mill Factory Interior"
+                                src={feedsPond}
+                                alt="Chamok Fish Feed Pond"
                                 loading="lazy"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />

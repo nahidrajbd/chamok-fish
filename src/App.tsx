@@ -10,11 +10,13 @@ import ProductsPage from '@/pages/ProductsPage';
 import CeoPage from '@/pages/CeoPage';
 import DealersPage from '@/pages/DealersPage';
 import ContactPage from '@/pages/ContactPage';
+import ScrollToTop from '@/components/layout/ScrollToTop';
 
 export default function App() {
     return (
         <HelmetProvider>
             <BrowserRouter>
+                <ScrollToTop />
                 <Navbar />
                 <main className="pt-16 lg:pt-20">
                     <Routes>

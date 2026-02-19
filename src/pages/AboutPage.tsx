@@ -1,9 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
-    Users, Factory, Leaf, Award, MapPin, Phone, Mail,
+    Users, Factory, MapPin, Phone, Mail,
     Quote, ChevronRight,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import CTAStrip from '@/components/sections/CTAStrip';
 import { siteConfig } from '@/data/siteConfig';
 import basharPhoto from '@/images/bashar.png';
@@ -70,24 +71,6 @@ const team = [
         dept: 'ডিলার নেটওয়ার্ক',
         photo: null,
     },
-];
-
-/* ── Core values ─────────────────────────────────────────────── */
-const values = [
-    { icon: Award, title: 'গুণমান', desc: 'প্রতিটি ব্যাচ পরীক্ষিত এবং মানসম্পন্ন।', color: 'text-gold   bg-gold/10' },
-    { icon: Leaf, title: 'পরিবেশ', desc: 'পরিবেশবান্ধব, টেকসই উৎপাদন প্রক্রিয়া।', color: 'text-teal   bg-teal/10' },
-    { icon: Users, title: 'সম্প্রদায়', desc: 'কৃষকদের সাথে দীর্ঘমেয়াদি আস্থার সম্পর্ক।', color: 'text-steel  bg-steel/10' },
-    { icon: Factory, title: 'উদ্ভাবন', desc: 'আধুনিক প্রযুক্তিতে নিরন্তর উন্নয়ন।', color: 'text-navy   bg-navy/10' },
-];
-
-/* ── Milestones ──────────────────────────────────────────────── */
-const milestones = [
-    { year: '২০১০', event: 'রাজশাহীতে বেস্ট পদ্মা এগ্রো ফিডস প্রতিষ্ঠা।' },
-    { year: '২০১৩', event: 'চমক ব্র্যান্ডের প্রথম ভাসমান ফিড বাজারে আনা হয়।' },
-    { year: '২০১৭', event: 'পুঠিয়ায় ইনাম ফিড মিল কারখানা স্থাপিত হয়।' },
-    { year: '২০২০', event: 'বায়োটেক ব্র্যান্ড লঞ্চ — কার্প ও পাঙ্গাসের জন্য।' },
-    { year: '২০২৩', event: '১০০+ ডিলার নেটওয়ার্ক গড়ে ওঠে রাজশাহী বিভাগে।' },
-    { year: '২০২৫', event: 'ডিজিটাল প্ল্যাটফর্ম চালু ও নতুন পণ্য সংযোজন।' },
 ];
 
 
@@ -310,9 +293,9 @@ export default function AboutPage() {
                             <div className="mt-8 grid grid-cols-2 gap-4">
                                 {[
                                     { icon: Factory, label: 'আধুনিক উৎপাদন লাইন' },
-                                    { icon: Award, label: 'কঠোর মান নিয়ন্ত্রণ' },
-                                    { icon: Leaf, label: 'পরিবেশবান্ধব' },
-                                    { icon: Users, label: 'দক্ষ জনবল' },
+                                    { icon: MapPin, label: 'কঠোর মান নিয়ন্ত্রণ' },
+                                    { icon: Users, label: 'পরিবেশবান্ধব' },
+                                    { icon: Factory, label: 'দক্ষ জনবল' },
                                 ].map((item) => {
                                     const Icon = item.icon;
                                     return (
@@ -418,99 +401,26 @@ export default function AboutPage() {
                                     আল্লাহ হাফিজ। আপনার মৎস্য চাষ সমৃদ্ধ হোক।
                                 </p>
                             </div>
-                            <div className="mt-8 pt-6 border-t border-white/10">
-                                <p className="text-white font-bold font-[family-name:var(--font-bengali)]">{siteConfig.founder}</p>
-                                <p className="text-teal text-sm font-[family-name:var(--font-bengali)]">{siteConfig.founderTitle}</p>
+                            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
+                                <div>
+                                    <p className="text-white font-bold font-[family-name:var(--font-bengali)]">{siteConfig.founder}</p>
+                                    <p className="text-teal text-sm font-[family-name:var(--font-bengali)]">{siteConfig.founderTitle}</p>
+                                </div>
+                                <Link
+                                    to="/ceo"
+                                    className="inline-flex items-center gap-1.5 text-gold/80 hover:text-gold text-sm font-[family-name:var(--font-bengali)] transition-colors"
+                                >
+                                    পূর্ণ পরিচয় পড়ুন
+                                    <ChevronRight className="w-4 h-4" />
+                                </Link>
                             </div>
                         </FadeIn>
                     </div>
                 </div>
             </section>
 
-            {/* ── Mission / Vision ─────────────────────────────────── */}
-            <section className="section-padding bg-pageBg">
-                <div className="container-custom max-w-4xl">
-                    <FadeIn className="grid md:grid-cols-2 gap-6">
-                        {[
-                            {
-                                label: 'আমাদের লক্ষ্য',
-                                labelEn: 'Mission',
-                                text: 'বাংলাদেশের মৎস্য চাষিদের জন্য সাশ্রয়ী, উচ্চমানের ও বিজ্ঞানসম্মত মৎস্য খাদ্য সরবরাহ করা এবং তাদের উৎপাদনশীলতা বৃদ্ধিতে অবদান রাখা।',
-                                accent: 'border-l-4 border-teal bg-teal/5',
-                            },
-                            {
-                                label: 'আমাদের দৃষ্টিভঙ্গি',
-                                labelEn: 'Vision',
-                                text: 'দক্ষিণ এশিয়ার অন্যতম শীর্ষ মৎস্য খাদ্য উৎপাদনকারী ব্র্যান্ড হিসেবে প্রতিষ্ঠিত হওয়া এবং বাংলাদেশের মৎস্য শিল্পের টেকসই উন্নয়নে নেতৃত্ব দেওয়া।',
-                                accent: 'border-l-4 border-gold bg-gold/5',
-                            },
-                        ].map((item) => (
-                            <div key={item.label} className={`rounded-card p-8 ${item.accent}`}>
-                                <p className="text-bodyGray/60 text-xs uppercase tracking-widest mb-2">{item.labelEn}</p>
-                                <h3 className="text-navy font-bold text-lg mb-4 font-[family-name:var(--font-bengali)]">{item.label}</h3>
-                                <p className="text-bodyGray leading-relaxed font-[family-name:var(--font-bengali)]">{item.text}</p>
-                            </div>
-                        ))}
-                    </FadeIn>
-                </div>
-            </section>
 
-            {/* ── Core Values ──────────────────────────────────────── */}
-            <section className="section-padding bg-panelBg">
-                <div className="container-custom">
-                    <FadeIn className="text-center mb-10">
-                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">আমাদের মূল্যবোধ</h2>
-                    </FadeIn>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-                        {values.map((v, i) => {
-                            const Icon = v.icon;
-                            return (
-                                <FadeIn key={v.title} delay={i * 0.09}>
-                                    <div className="bg-cardBg rounded-card p-6 text-center border border-border/40 card-hover h-full">
-                                        <div className={`w-12 h-12 rounded-xl ${v.color} flex items-center justify-center mx-auto mb-4`}>
-                                            <Icon className="w-6 h-6" />
-                                        </div>
-                                        <h3 className="text-navy font-semibold text-sm mb-2 font-[family-name:var(--font-bengali)]">{v.title}</h3>
-                                        <p className="text-bodyGray text-xs font-[family-name:var(--font-bengali)]">{v.desc}</p>
-                                    </div>
-                                </FadeIn>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
 
-            {/* ── Timeline ─────────────────────────────────────────── */}
-            <section className="section-padding bg-pageBg">
-                <div className="container-custom max-w-3xl">
-                    <FadeIn className="text-center mb-12">
-                        <span className="inline-block bg-teal/10 text-teal text-sm font-medium px-4 py-1.5 rounded-full mb-4 font-[family-name:var(--font-bengali)]">
-                            ইতিহাস
-                        </span>
-                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">আমাদের যাত্রাপথ</h2>
-                    </FadeIn>
-                    <div className="relative">
-                        <div className="absolute left-[4.5rem] top-0 bottom-0 w-px bg-gradient-to-b from-teal via-border/60 to-transparent" />
-                        <div className="space-y-8">
-                            {milestones.map((m, i) => (
-                                <FadeIn key={m.year} delay={i * 0.08}>
-                                    <div className="flex items-start gap-6">
-                                        <div className="shrink-0 w-14 text-right pt-1">
-                                            <span className="text-teal font-bold text-sm font-[family-name:var(--font-bengali)]">{m.year}</span>
-                                        </div>
-                                        <div className="relative flex items-start pt-1.5">
-                                            <div className="w-3 h-3 bg-teal rounded-full border-2 border-white shadow-md z-10 shrink-0 mt-0.5" style={{ marginLeft: '-1.65rem', marginRight: '1.25rem' }} />
-                                            <div className="bg-cardBg rounded-xl p-4 border border-border/40 flex-1">
-                                                <p className="text-bodyGray text-sm leading-relaxed font-[family-name:var(--font-bengali)]">{m.event}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </FadeIn>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* ── Team Members ─────────────────────────────────────── */}
             <section className="section-padding bg-panelBg">
@@ -564,32 +474,6 @@ export default function AboutPage() {
                             </FadeIn>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* ── Office Location ──────────────────────────────────── */}
-            <section className="py-14 bg-pageBg">
-                <div className="container-custom">
-                    <FadeIn className="text-center mb-6">
-                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">অফিসের অবস্থান</h2>
-                    </FadeIn>
-                    <FadeIn delay={0.1}>
-                        <div className="rounded-card overflow-hidden border border-border/40 shadow-md h-72">
-                            <iframe
-                                src={siteConfig.googleMapsEmbedOffice}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="চমক ফিশ ফিড অফিস — রাজশাহী"
-                            />
-                        </div>
-                        <p className="text-center text-bodyGray text-sm mt-4 font-[family-name:var(--font-bengali)]">
-                            📍 {siteConfig.officeAddressFull}
-                        </p>
-                    </FadeIn>
                 </div>
             </section>
 

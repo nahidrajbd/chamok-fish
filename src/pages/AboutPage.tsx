@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
     Users, Factory, Leaf, Award, MapPin, Phone, Mail,
-    Quote, Play, X, ChevronRight,
+    Quote, ChevronRight,
 } from 'lucide-react';
 import CTAStrip from '@/components/sections/CTAStrip';
 import { siteConfig } from '@/data/siteConfig';
@@ -91,48 +90,6 @@ const milestones = [
     { year: '২০২৫', event: 'ডিজিটাল প্ল্যাটফর্ম চালু ও নতুন পণ্য সংযোজন।' },
 ];
 
-/* ── Video Modal ─────────────────────────────────────────────── */
-// Replace VIDEO_ID with your actual YouTube video ID
-const CEO_YOUTUBE_ID = 'VIDEO_ID';
-
-function VideoModal({ onClose }: { onClose: () => void }) {
-    return (
-        <AnimatePresence>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-                onClick={onClose}
-            >
-                <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.9, opacity: 0 }}
-                    onClick={(e) => e.stopPropagation()}
-                    className="relative w-full max-w-3xl"
-                >
-                    <button
-                        onClick={onClose}
-                        className="absolute -top-10 right-0 text-white/70 hover:text-white transition-colors flex items-center gap-2 text-sm"
-                    >
-                        <X className="w-5 h-5" /> বন্ধ করুন
-                    </button>
-                    <div className="aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src={`https://www.youtube.com/embed/${CEO_YOUTUBE_ID}?autoplay=1`}
-                            title="CEO Video Message — চমক ফিশ ফিড"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
-                    </div>
-                </motion.div>
-            </motion.div>
-        </AnimatePresence>
-    );
-}
 
 /* ── Fade-in wrapper ─────────────────────────────────────────── */
 const FadeIn = ({
@@ -157,7 +114,6 @@ const FadeIn = ({
 
 /* ══════════════════════════════════════════════════════════════ */
 export default function AboutPage() {
-    const [showVideo, setShowVideo] = useState(false);
 
     return (
         <>
@@ -409,7 +365,7 @@ export default function AboutPage() {
                     </FadeIn>
 
                     <div className="grid lg:grid-cols-5 gap-10 items-start max-w-5xl mx-auto">
-                        {/* Photo + Video CTA */}
+                        {/* Photo column */}
                         <FadeIn delay={0.1} className="lg:col-span-2 flex flex-col items-center gap-5">
                             <div className="relative">
                                 <div className="w-52 h-52 rounded-full overflow-hidden border-4 border-gold/40 shadow-2xl">
@@ -428,19 +384,6 @@ export default function AboutPage() {
                                 <p className="text-white font-bold text-xl font-[family-name:var(--font-bengali)]">{siteConfig.founder}</p>
                                 <p className="text-teal text-sm mt-1 font-[family-name:var(--font-bengali)]">{siteConfig.founderTitle}</p>
                                 <p className="text-white/40 text-xs mt-0.5">Best Padma Agro Feeds</p>
-                            </div>
-
-                            <div className="flex flex-col items-center gap-2.5 w-full">
-                                <button
-                                    onClick={() => setShowVideo(true)}
-                                    className="flex items-center justify-center gap-3 w-full max-w-xs bg-gold text-navy font-bold py-3.5 rounded-xl hover:bg-[#e6a502] transition-all hover:shadow-lg hover:shadow-gold/20 group"
-                                >
-                                    <div className="w-8 h-8 bg-navy/15 rounded-full flex items-center justify-center">
-                                        <Play className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
-                                    </div>
-                                    <span className="font-[family-name:var(--font-bengali)]">ভিডিও বার্তা দেখুন</span>
-                                </button>
-                                <p className="text-white/30 text-xs font-[family-name:var(--font-bengali)]">MD-এর বিশেষ বার্তা · YouTube</p>
                             </div>
 
                             <div className="flex flex-col gap-2 w-full max-w-xs">
@@ -651,9 +594,6 @@ export default function AboutPage() {
             </section>
 
             <CTAStrip />
-
-            {/* ── Video Modal ──────────────────────────────────────── */}
-            {showVideo && <VideoModal onClose={() => setShowVideo(false)} />}
         </>
     );
 }

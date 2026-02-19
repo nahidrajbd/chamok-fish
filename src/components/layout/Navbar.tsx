@@ -6,7 +6,6 @@ import { siteConfig } from '@/data/siteConfig';
 const navLinks = [
     { href: '/', label: 'হোম' },
     { href: '/products', label: 'পণ্যসমূহ' },
-    { href: '/why-chamok', label: 'কেন চমক?' },
     { href: '/about', label: 'আমাদের সম্পর্কে' },
     { href: '/dealers', label: 'ডিলার নেটওয়ার্ক' },
     { href: '/contact', label: 'যোগাযোগ' },

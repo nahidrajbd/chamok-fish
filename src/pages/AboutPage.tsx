@@ -313,15 +313,11 @@ export default function AboutPage() {
                         <FadeIn delay={0.15}>
                             <div className="space-y-4">
                                 <div className="aspect-video rounded-card overflow-hidden border border-border/40 shadow-md">
-                                    <iframe
-                                        src={siteConfig.googleMapsEmbedFactory}
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen
+                                    <img
+                                        src="https://images.unsplash.com/photo-1626262967267-33a763878772?q=80&w=2670&auto=format&fit=crop"
+                                        alt="Inam Feed Mill Factory Interior"
+                                        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                         loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        title="ইনাম ফিড মিল — পুঠিয়া, রাজশাহী"
                                     />
                                 </div>
                                 <div className="flex items-start gap-3 bg-cardBg rounded-xl p-4 border border-border/40">

@@ -168,25 +168,7 @@ export default function DealersPage() {
                 </div>
             </section>
 
-            {/* ── Office Map ───────────────────────────────────── */}
-            <section className="py-12 bg-pageBg">
-                <div className="container-custom">
-                    <h2 className="text-navy mb-6 text-center font-[family-name:var(--font-bengali)]">অফিসের অবস্থান</h2>
-                    <div className="rounded-card overflow-hidden border border-border/40 shadow-md h-80">
-                        <iframe
-                            src={siteConfig.googleMapsEmbedOffice}
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="চমক ফিশ ফিড অফিস"
-                        />
-                    </div>
-                    <p className="text-center text-bodyGray text-sm mt-4 font-[family-name:var(--font-bengali)]">📍 {siteConfig.officeAddressFull}</p>
-                </div>
-            </section>
+
 
             <CTAStrip />
         </>

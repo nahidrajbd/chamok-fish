@@ -32,7 +32,8 @@ const contactInfo = [
         icon: MapPin,
         label: 'অফিস',
         value: siteConfig.officeAddressFull,
-        href: '#map',
+
+        // href removed
         color: 'text-navy',
         bg: 'bg-navy/10',
     },
@@ -77,13 +78,14 @@ export default function ContactPage() {
                         <div className="lg:col-span-2 space-y-4">
                             {contactInfo.map((info) => {
                                 const Icon = info.icon;
+                                const Tag = info.href ? 'a' : 'div';
                                 return (
-                                    <a
+                                    <Tag
                                         key={info.label}
                                         href={info.href}
-                                        target={info.href.startsWith('http') ? '_blank' : undefined}
-                                        rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                        className="flex items-start gap-4 bg-cardBg rounded-card p-5 border border-border/40 hover:border-teal/30 hover:shadow-md transition-all duration-200 group"
+                                        target={info.href?.startsWith('http') ? '_blank' : undefined}
+                                        rel={info.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className={`flex items-start gap-4 bg-cardBg rounded-card p-5 border border-border/40 transition-all duration-200 group ${info.href ? 'hover:border-teal/30 hover:shadow-md cursor-pointer' : ''}`}
                                     >
                                         <div className={`w-10 h-10 ${info.bg} rounded-xl flex items-center justify-center shrink-0`}>
                                             <Icon className={`w-5 h-5 ${info.color}`} />
@@ -92,7 +94,7 @@ export default function ContactPage() {
                                             <p className="text-bodyGray text-xs mb-0.5 font-[family-name:var(--font-bengali)]">{info.label}</p>
                                             <p className="text-navy font-semibold text-sm group-hover:text-teal transition-colors font-[family-name:var(--font-bengali)]">{info.value}</p>
                                         </div>
-                                    </a>
+                                    </Tag>
                                 );
                             })}
 
@@ -137,15 +139,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Map */}
-            <section id="map" className="py-12 bg-panelBg">
-                <div className="container-custom">
-                    <h2 className="text-navy mb-6 text-center font-[family-name:var(--font-bengali)]">আমাদের অফিস খুঁজুন</h2>
-                    <div className="rounded-card overflow-hidden border border-border/40 shadow-md h-80">
-                        <iframe src={siteConfig.googleMapsEmbedOffice} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="চমক ফিশ ফিড অফিস" />
-                    </div>
-                </div>
-            </section>
+
         </>
     );
 }

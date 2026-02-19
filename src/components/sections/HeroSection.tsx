@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
+import { siteConfig } from '@/data/siteConfig';
+
 export default function HeroSection() {
     return (
         <section className="relative h-screen flex items-center overflow-hidden bg-navy">
@@ -45,7 +47,7 @@ export default function HeroSection() {
                             transition={{ delay: 0.4, duration: 0.7 }}
                             className="text-gold font-bold text-2xl mb-6 font-[family-name:var(--font-bengali)] drop-shadow-md"
                         >
-                            মাছ চাষির বিশ্বস্ত সঙ্গী
+                            {siteConfig.tagline}
                         </motion.p>
 
                         <motion.p

@@ -4,7 +4,7 @@ export const siteConfig = {
     nameEn: "Chamok Fish Feed",
     company: "বেস্ট পদ্মা এগ্রো ফিডস",
     companyEn: "Best Padma Agro Feeds",
-    tagline: "মাছ চাষির বিশ্বস্ত সঙ্গী",
+    tagline: "কম খরচে বেশি উৎপাদনে চমক ফিড ব্যবহার করুন",
     taglineEn: "The trusted companion of fish farmers",
     phone: "01741973426",
     phoneDisplay: "০১৭৪১৯৭৩৪২৬",

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Phone, MapPin, Users, MessageCircle, CheckCircle, TrendingUp, Handshake, Award } from 'lucide-react';
+import { MapPin, Users, MessageCircle, CheckCircle, TrendingUp, Handshake, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import CTAStrip from '@/components/sections/CTAStrip';
 import { dealers } from '@/data/dealers';
@@ -155,13 +155,7 @@ export default function DealersPage() {
                                     <MapPin className="w-4 h-4 text-bodyGray shrink-0 mt-0.5" />
                                     <p className="text-bodyGray text-sm font-[family-name:var(--font-bengali)]">{dealer.location}</p>
                                 </div>
-                                <a
-                                    href={`tel:${dealer.phone}`}
-                                    className="flex items-center justify-center gap-2 w-full bg-teal/10 hover:bg-teal text-teal hover:text-white font-semibold py-2.5 rounded-lg transition-all duration-200 text-sm font-[family-name:var(--font-bengali)]"
-                                >
-                                    <Phone className="w-4 h-4" />
-                                    এখনই কল করুন
-                                </a>
+
                             </motion.div>
                         ))}
                     </div>

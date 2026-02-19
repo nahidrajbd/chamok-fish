@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { dealers } from '@/data/dealers';
 
 export default function DealerCTA() {
@@ -15,23 +15,23 @@ export default function DealerCTA() {
                             আপনার এলাকার ডিলার খুঁজছেন?
                         </h2>
                         <p className="text-bodyGray font-[family-name:var(--font-bengali)]">
-                            সরাসরি কথা বলুন আমাদের ডিলারদের সাথে অথবা সম্পূর্ণ তালিকা দেখুন।
+                            আমাদের নিবন্ধিত ডিলারদের তালিকা দেখুন।
                         </p>
                     </div>
 
+
                     <div className="flex flex-wrap items-center justify-center gap-4">
                         {topDealers.map((dealer) => (
-                            <a
+                            <div
                                 key={dealer.id}
-                                href={`tel:${dealer.phone}`}
-                                className="flex items-center gap-2 bg-mist/50 hover:bg-mist px-4 py-2.5 rounded-lg border border-border/40 transition-colors group"
+                                className="flex items-center gap-2 bg-mist/50 px-4 py-2.5 rounded-lg border border-border/40 transition-colors"
                             >
-                                <Phone className="w-4 h-4 text-teal group-hover:scale-110 transition-transform" />
+                                <span className="w-2 h-2 rounded-full bg-teal shrink-0" />
                                 <div className="text-left">
-                                    <p className="text-xs text-bodyGray font-[family-name:var(--font-bengali)]">{dealer.upazila}</p>
-                                    <p className="text-sm font-semibold text-navy font-[family-name:var(--font-bengali)]">{dealer.phoneDisplay}</p>
+                                    <p className="text-xs text-bodyGray font-[family-name:var(--font-bengali)] leading-none mb-1">{dealer.upazila}</p>
+                                    <p className="text-sm font-semibold text-navy font-[family-name:var(--font-bengali)] leading-none">{dealer.nameBn}</p>
                                 </div>
-                            </a>
+                            </div>
                         ))}
                     </div>
 
@@ -41,6 +41,6 @@ export default function DealerCTA() {
                     </Link>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

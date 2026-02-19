@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/sections/HeroSection';
-import StatsBar from '@/components/sections/StatsBar';
+
 import FeaturedProducts from '@/components/sections/FeaturedProducts';
 import WhyChamakSection from '@/components/sections/WhyChamak';
 import AboutSnapshot from '@/components/sections/AboutSnapshot';
@@ -22,7 +22,7 @@ export default function HomePage() {
             </Helmet>
 
             <HeroSection />
-            <StatsBar />
+
             <FeaturedProducts />
             <WhyChamakSection />
             <AboutSnapshot />

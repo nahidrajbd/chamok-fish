@@ -41,8 +41,14 @@ export default function Navbar() {
                 <div className="container-custom">
                     <nav className="flex items-center justify-between h-16 lg:h-20">
                         {/* Logo */}
-                        <Link to="/" className="flex items-center gap-2 shrink-0">
-                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-12 w-auto max-w-[180px]" />
+                        <Link to="/" className="flex items-center gap-3 shrink-0">
+                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-10 sm:h-12 sm:w-12" />
+                            <div className="hidden sm:block">
+                                <p className="text-navy font-bold text-lg leading-tight font-[family-name:var(--font-bengali)]">
+                                    চমক ফিশ ফিড
+                                </p>
+                                <p className="text-teal text-[11px] leading-tight font-medium">Best Padma Agro Feeds</p>
+                            </div>
                         </Link>
 
                         {/* Desktop Nav Links */}
@@ -113,7 +119,8 @@ export default function Navbar() {
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-5 border-b border-white/10">
                         <div className="flex items-center gap-2">
-                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-auto bg-white rounded px-2 py-1" />
+                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-10 bg-white rounded-lg p-1.5" />
+                            <p className="text-white font-bold text-lg font-[family-name:var(--font-bengali)]">চমক ফিশ ফিড</p>
                         </div>
                         <button onClick={() => setIsMenuOpen(false)} className="text-white/70 hover:text-white transition-colors">
                             <X size={22} />

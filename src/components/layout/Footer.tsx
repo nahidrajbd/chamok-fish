@@ -21,11 +21,15 @@ export default function Footer() {
                     {/* Column 1 */}
                     <div className="space-y-5">
                         <Link to="/" className="flex items-center gap-3">
-                            <img
-                                src="/logo.svg"
-                                alt="Chamok Fish Feed"
-                                className="h-14 w-auto bg-white rounded-lg px-3 py-1.5"
-                            />
+                            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2 shadow-lg shrink-0">
+                                <img src="/logo.svg" alt="Chamok Fish Feed" className="w-full h-full object-contain" />
+                            </div>
+                            <div>
+                                <p className="text-white font-bold text-lg leading-tight font-[family-name:var(--font-bengali)]">
+                                    চমক ফিশ ফিড
+                                </p>
+                                <p className="text-white text-xs opacity-60">Best Padma Agro Feeds</p>
+                            </div>
                         </Link>
                         <p className="text-white/70 text-sm leading-relaxed font-[family-name:var(--font-bengali)]">
                             {siteConfig.tagline} — উচ্চমানের মৎস্য খাদ্য উৎপাদনে আমরা বদ্ধপরিকর। রাজশাহী থেকে সারাদেশে।

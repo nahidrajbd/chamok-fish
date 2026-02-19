@@ -1,8 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { products, chamakProducts, biotechProducts } from "@/data/products";
+import { chamakProducts, biotechProducts } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 
 export default function ProductGrid() {
@@ -19,8 +17,8 @@ export default function ProductGrid() {
                     <button
                         onClick={() => setActiveTab("chamak")}
                         className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 font-[family-name:var(--font-bengali)] ${activeTab === "chamak"
-                                ? "bg-navy text-white shadow-md"
-                                : "text-bodyGray hover:text-navy"
+                            ? "bg-navy text-white shadow-md"
+                            : "text-bodyGray hover:text-navy"
                             }`}
                     >
                         চমক ফিশ ফিড
@@ -28,8 +26,8 @@ export default function ProductGrid() {
                     <button
                         onClick={() => setActiveTab("biotech")}
                         className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 font-[family-name:var(--font-bengali)] ${activeTab === "biotech"
-                                ? "bg-teal text-white shadow-md"
-                                : "text-bodyGray hover:text-navy"
+                            ? "bg-teal text-white shadow-md"
+                            : "text-bodyGray hover:text-navy"
                             }`}
                     >
                         বায়োটেক ফিশ ফিড

@@ -1,9 +1,7 @@
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Phone, MessageCircle, ArrowRight } from "lucide-react";
-import { siteConfig } from "@/data/siteConfig";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
 
 export default function CTAStrip() {
     return (
@@ -19,8 +17,7 @@ export default function CTAStrip() {
                         আজই আমাদের সাথে যোগাযোগ করুন
                     </h2>
                     <p className="text-white/80 text-lg mb-8 font-[family-name:var(--font-bengali)]">
-                        সেরা মানের মৎস্য খাদ্যের জন্য এখনই অর্ডার করুন অথবা ডিলার হওয়ার
-                        সুযোগ নিন।
+                        সেরা মানের মৎস্য খাদ্যের জন্য এখনই অর্ডার করুন অথবা ডিলার হওয়ার সুযোগ নিন।
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -29,9 +26,7 @@ export default function CTAStrip() {
                             className="flex items-center gap-3 bg-white text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold transition-all duration-200 hover:shadow-lg w-full sm:w-auto justify-center"
                         >
                             <Phone className="w-5 h-5" />
-                            <span className="font-[family-name:var(--font-bengali)]">
-                                {siteConfig.phoneDisplay}
-                            </span>
+                            <span className="font-[family-name:var(--font-bengali)]">{siteConfig.phoneDisplay}</span>
                         </a>
 
                         <a
@@ -41,18 +36,14 @@ export default function CTAStrip() {
                             className="flex items-center gap-3 bg-[#25D366] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#22c55e] transition-all duration-200 hover:shadow-lg w-full sm:w-auto justify-center"
                         >
                             <MessageCircle className="w-5 h-5" />
-                            <span className="font-[family-name:var(--font-bengali)]">
-                                WhatsApp-এ মেসেজ করুন
-                            </span>
+                            <span className="font-[family-name:var(--font-bengali)]">WhatsApp-এ মেসেজ করুন</span>
                         </a>
 
                         <Link
-                            href="/dealers"
+                            to="/dealers"
                             className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 w-full sm:w-auto justify-center"
                         >
-                            <span className="font-[family-name:var(--font-bengali)]">
-                                Dealer হন
-                            </span>
+                            <span className="font-[family-name:var(--font-bengali)]">Dealer হন</span>
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>

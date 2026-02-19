@@ -1,10 +1,10 @@
 // src/lib/emailjs.ts
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
-const CONTACT_TEMPLATE = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT || "";
-const DEALER_TEMPLATE = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_DEALER || "";
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const CONTACT_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT || '';
+const DEALER_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE_DEALER || '';
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
 export interface ContactFormData {
     name: string;

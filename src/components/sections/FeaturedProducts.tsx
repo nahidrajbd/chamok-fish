@@ -1,16 +1,13 @@
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Package } from "lucide-react";
-import { featuredProducts } from "@/data/products";
-import { ProductCard } from "@/components/products/ProductCard";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, Package } from 'lucide-react';
+import { featuredProducts } from '@/data/products';
+import { ProductCard } from '@/components/products/ProductCard';
 
 export default function FeaturedProducts() {
     return (
         <section className="section-padding bg-mist/40">
             <div className="container-custom">
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -22,20 +19,14 @@ export default function FeaturedProducts() {
                             <Package className="w-4 h-4" />
                             আমাদের পণ্য
                         </span>
-                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">
-                            বিশেষ পণ্যসমূহ
-                        </h2>
+                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">বিশেষ পণ্যসমূহ</h2>
                     </div>
-                    <Link
-                        href="/products"
-                        className="btn-teal text-sm whitespace-nowrap font-[family-name:var(--font-bengali)]"
-                    >
+                    <Link to="/products" className="btn-teal text-sm whitespace-nowrap font-[family-name:var(--font-bengali)]">
                         সব পণ্য দেখুন
                         <ArrowRight className="w-4 h-4" />
                     </Link>
                 </motion.div>
 
-                {/* Products Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {featuredProducts.map((product, i) => (
                         <motion.div

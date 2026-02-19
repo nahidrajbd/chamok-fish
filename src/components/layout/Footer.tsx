@@ -1,14 +1,14 @@
-import Link from "next/link";
-import { Phone, MapPin, Facebook, Fish, Mail } from "lucide-react";
-import { siteConfig } from "@/data/siteConfig";
+import { Link } from 'react-router-dom';
+import { Phone, MapPin, Facebook, Fish, Mail } from 'lucide-react';
+import { siteConfig } from '@/data/siteConfig';
 
 const quickLinks = [
-    { href: "/", label: "হোম" },
-    { href: "/products", label: "পণ্যসমূহ" },
-    { href: "/why-chamok", label: "কেন চমক?" },
-    { href: "/about", label: "আমাদের সম্পর্কে" },
-    { href: "/dealers", label: "ডিলার নেটওয়ার্ক" },
-    { href: "/contact", label: "যোগাযোগ" },
+    { href: '/', label: 'হোম' },
+    { href: '/products', label: 'পণ্যসমূহ' },
+    { href: '/why-chamok', label: 'কেন চমক?' },
+    { href: '/about', label: 'আমাদের সম্পর্কে' },
+    { href: '/dealers', label: 'ডিলার নেটওয়ার্ক' },
+    { href: '/contact', label: 'যোগাযোগ' },
 ];
 
 export default function Footer() {
@@ -18,9 +18,9 @@ export default function Footer() {
         <footer className="bg-navy text-white">
             <div className="container-custom py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    {/* Column 1: Logo + Tagline + Social */}
+                    {/* Column 1 */}
                     <div className="space-y-5">
-                        <Link href="/" className="flex items-center gap-3">
+                        <Link to="/" className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center border border-gold/30">
                                 <Fish className="w-7 h-7 text-gold" />
                             </div>
@@ -32,8 +32,7 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className="text-white/70 text-sm leading-relaxed font-[family-name:var(--font-bengali)]">
-                            {siteConfig.tagline} — উচ্চমানের মৎস্য খাদ্য উৎপাদনে আমরা বদ্ধপরিকর।
-                            রাজশাহী থেকে সারাদেশে।
+                            {siteConfig.tagline} — উচ্চমানের মৎস্য খাদ্য উৎপাদনে আমরা বদ্ধপরিকর। রাজশাহী থেকে সারাদেশে।
                         </p>
                         <div className="flex gap-3">
                             <a
@@ -66,7 +65,7 @@ export default function Footer() {
                             {quickLinks.map((link) => (
                                 <li key={link.href}>
                                     <Link
-                                        href={link.href}
+                                        to={link.href}
                                         className="text-white/65 hover:text-gold text-sm transition-colors flex items-center gap-2 font-[family-name:var(--font-bengali)]"
                                     >
                                         <span className="w-1 h-1 bg-teal rounded-full" />
@@ -77,11 +76,9 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact Info */}
+                    {/* Column 3: Contact */}
                     <div className="space-y-5">
-                        <h3 className="text-white font-semibold text-base font-[family-name:var(--font-bengali)]">
-                            যোগাযোগ
-                        </h3>
+                        <h3 className="text-white font-semibold text-base font-[family-name:var(--font-bengali)]">যোগাযোগ</h3>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 text-teal mt-0.5 shrink-0" />
@@ -101,19 +98,11 @@ export default function Footer() {
                                     </p>
                                 </div>
                             </div>
-                            <a
-                                href={`tel:${siteConfig.phone}`}
-                                className="flex items-center gap-3 text-white/75 hover:text-gold transition-colors"
-                            >
+                            <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-3 text-white/75 hover:text-gold transition-colors">
                                 <Phone className="w-4 h-4 text-teal shrink-0" />
-                                <span className="font-[family-name:var(--font-bengali)] text-sm">
-                                    {siteConfig.phoneDisplay}
-                                </span>
+                                <span className="font-[family-name:var(--font-bengali)] text-sm">{siteConfig.phoneDisplay}</span>
                             </a>
-                            <a
-                                href={`mailto:${siteConfig.email}`}
-                                className="flex items-center gap-3 text-white/75 hover:text-gold transition-colors"
-                            >
+                            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 text-white/75 hover:text-gold transition-colors">
                                 <Mail className="w-4 h-4 text-teal shrink-0" />
                                 <span className="text-sm">{siteConfig.email}</span>
                             </a>
@@ -122,7 +111,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="border-t border-white/10">
                 <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p className="text-white/40 text-xs text-center font-[family-name:var(--font-bengali)]">

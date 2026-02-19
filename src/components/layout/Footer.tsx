@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Facebook, Fish, Mail } from 'lucide-react';
+import { Phone, MapPin, Facebook, Mail } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
 const quickLinks = [
@@ -21,15 +21,11 @@ export default function Footer() {
                     {/* Column 1 */}
                     <div className="space-y-5">
                         <Link to="/" className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center border border-gold/30">
-                                <Fish className="w-7 h-7 text-gold" />
-                            </div>
-                            <div>
-                                <p className="text-white font-bold text-lg leading-tight font-[family-name:var(--font-bengali)]">
-                                    চমক ফিশ ফিড
-                                </p>
-                                <p className="text-white/50 text-xs">Best Padma Agro Feeds</p>
-                            </div>
+                            <img
+                                src="/logo.svg"
+                                alt="Chamok Fish Feed"
+                                className="h-14 w-auto bg-white rounded-lg px-3 py-1.5"
+                            />
                         </Link>
                         <p className="text-white/70 text-sm leading-relaxed font-[family-name:var(--font-bengali)]">
                             {siteConfig.tagline} — উচ্চমানের মৎস্য খাদ্য উৎপাদনে আমরা বদ্ধপরিকর। রাজশাহী থেকে সারাদেশে।

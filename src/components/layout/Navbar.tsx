@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Phone, MessageCircle, Menu, X, Fish } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
 const navLinks = [
@@ -42,15 +42,7 @@ export default function Navbar() {
                     <nav className="flex items-center justify-between h-16 lg:h-20">
                         {/* Logo */}
                         <Link to="/" className="flex items-center gap-2 shrink-0">
-                            <div className="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                                <Fish className="w-6 h-6 text-gold" strokeWidth={2} />
-                            </div>
-                            <div className="hidden sm:block">
-                                <p className="text-navy font-bold text-base leading-tight font-[family-name:var(--font-bengali)]">
-                                    চমক ফিশ ফিড
-                                </p>
-                                <p className="text-teal text-[11px] leading-tight">Best Padma Agro Feeds</p>
-                            </div>
+                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-12 w-auto max-w-[180px]" />
                         </Link>
 
                         {/* Desktop Nav Links */}
@@ -121,10 +113,7 @@ export default function Navbar() {
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-5 border-b border-white/10">
                         <div className="flex items-center gap-2">
-                            <div className="w-9 h-9 bg-gold rounded-lg flex items-center justify-center">
-                                <Fish className="w-5 h-5 text-navy" />
-                            </div>
-                            <p className="text-white font-bold font-[family-name:var(--font-bengali)]">চমক ফিশ ফিড</p>
+                            <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-auto bg-white rounded px-2 py-1" />
                         </div>
                         <button onClick={() => setIsMenuOpen(false)} className="text-white/70 hover:text-white transition-colors">
                             <X size={22} />

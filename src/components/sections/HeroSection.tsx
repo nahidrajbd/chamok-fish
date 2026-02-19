@@ -8,7 +8,7 @@ export default function HeroSection() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <img
-                    src="https://images.unsplash.com/photo-1544551763-8dd44758c03e?q=80&w=2669&auto=format&fit=crop"
+                    src="/hero-banner.jpg"
                     alt="Fish feeding in a pond"
                     className="w-full h-full object-cover"
                 />

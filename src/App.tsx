@@ -7,6 +7,7 @@ import WhatsAppFAB from '@/components/layout/WhatsAppFAB';
 import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
 import ProductsPage from '@/pages/ProductsPage';
+import ProductDetailPage from '@/pages/ProductDetailPage';
 import CeoPage from '@/pages/CeoPage';
 import DealersPage from '@/pages/DealersPage';
 import ContactPage from '@/pages/ContactPage';
@@ -23,6 +24,7 @@ export default function App() {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/products" element={<ProductsPage />} />
+                        <Route path="/products/:productId" element={<ProductDetailPage />} />
                         <Route path="/ceo" element={<CeoPage />} />
                         <Route path="/dealers" element={<DealersPage />} />
                         <Route path="/contact" element={<ContactPage />} />

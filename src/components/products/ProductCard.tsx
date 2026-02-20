@@ -102,8 +102,8 @@ export function ProductCard({ product, className }: ProductCardProps) {
                     </div>
                 </div>
 
-                <Link to="/contact" className="btn-teal inline-flex justify-center w-full sm:w-auto font-[family-name:var(--font-bengali)]">
-                    অর্ডার করতে যোগাযোগ করুন
+                <Link to={`/products/${product.id}`} className="btn-teal inline-flex justify-center w-full sm:w-auto font-[family-name:var(--font-bengali)]">
+                    বিস্তারিত ও অর্ডার করুন
                     <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
             </div>

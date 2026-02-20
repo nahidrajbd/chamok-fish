@@ -2,19 +2,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Package, TrendingUp, Droplets, Package2 } from 'lucide-react';
 import { products, ProductSpec } from '@/data/products';
-import chamokCarpGrower from '@/images/chamok-carp-grower.jpg';
-import chamokVasomanFeed from '@/images/chamok-vasoman-feed.jpg';
 
-// Helper to get only the 2 requested products with updated images
+// Show the 2 chamak featured products on the homepage
 const getHomePageProducts = () => {
     const targetIds = ['chamak-carp-grower', 'chamak-floating-feed'];
-    return products
-        .filter(p => targetIds.includes(p.id))
-        .map(p => {
-            if (p.id === 'chamak-carp-grower') return { ...p, image: chamokCarpGrower };
-            if (p.id === 'chamak-floating-feed') return { ...p, image: chamokVasomanFeed };
-            return p;
-        });
+    return products.filter(p => targetIds.includes(p.id));
 };
 
 const HorizontalProductCard = ({ product }: { product: ProductSpec }) => {

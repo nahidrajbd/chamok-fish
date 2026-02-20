@@ -1,4 +1,10 @@
 // src/data/products.ts
+import chamokCarpGrowerImg from '@/images/chamok-carp-grower.jpg';
+import chamokVasomanFeedImg from '@/images/chamok-vasoman-feed.jpg';
+import biotechCarpMashImg from '@/images/biotech-carp-mash.jpg';
+import biotechVasomanGrowerImg from '@/images/biotech-vasoman-grower.jpg';
+import biotechCarpGrowerImg from '@/images/biotech-carp-grower.jpg';
+
 export type FishType = "tilapia" | "carp" | "pangas" | "nursery";
 export type FeedType = "floating" | "sinking" | "mash";
 export type Brand = "chamak" | "biotech";
@@ -57,7 +63,7 @@ export const products: ProductSpec[] = [
             "কার্প ও তেলাপিয়ার জন্য",
         ],
         suitableFor: ["carp", "tilapia"],
-        image: "/images/products/chamak-carp-grower.jpg",
+        image: chamokCarpGrowerImg,
         featured: true,
     },
     {
@@ -85,7 +91,7 @@ export const products: ProductSpec[] = [
             "উচ্চ FCR নিশ্চিত",
         ],
         suitableFor: ["tilapia", "carp", "pangas"],
-        image: "/images/products/chamak-floating-feed.jpg",
+        image: chamokVasomanFeedImg,
         featured: true,
     },
     {
@@ -112,7 +118,7 @@ export const products: ProductSpec[] = [
             "সহজ হজমযোগ্য",
         ],
         suitableFor: ["carp", "nursery"],
-        image: "/images/products/biotech-nursery.jpg",
+        image: biotechCarpMashImg,
         featured: true,
     },
     {
@@ -139,7 +145,7 @@ export const products: ProductSpec[] = [
             "২৩%–৩০% প্রোটিন",
         ],
         suitableFor: ["tilapia", "carp", "pangas"],
-        image: "/images/products/biotech-floating-grower.jpg",
+        image: biotechVasomanGrowerImg,
     },
     {
         id: "biotech-carp-grower",
@@ -164,7 +170,7 @@ export const products: ProductSpec[] = [
             "সাশ্রয়ী মূল্যে সেরা মান",
         ],
         suitableFor: ["carp"],
-        image: "/images/products/biotech-carp-grower.jpg",
+        image: biotechCarpGrowerImg,
     },
 ];
 

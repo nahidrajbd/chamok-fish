@@ -48,8 +48,8 @@ export default function ProductsPage() {
                             key={tab.value}
                             onClick={() => setActiveTab(tab.value)}
                             className={`px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all font-[family-name:var(--font-bengali)] ${activeTab === tab.value
-                                    ? 'bg-navy text-white shadow-sm'
-                                    : 'bg-white text-bodyGray hover:bg-mist border border-border/40'
+                                ? 'bg-navy text-white shadow-sm'
+                                : 'bg-white text-bodyGray hover:bg-mist border border-border/40'
                                 }`}
                         >
                             {tab.label}
@@ -68,7 +68,7 @@ export default function ProductsPage() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.3 }}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
                         >
                             {filtered.map(product => (
                                 <ProductCard key={product.id} product={product} />

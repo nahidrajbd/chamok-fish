@@ -145,7 +145,7 @@ export default function ProductDetailPage() {
                                 <img
                                     src={product.image}
                                     alt={product.nameBn}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain p-4"
                                 />
                             </div>
 
@@ -267,11 +267,11 @@ export default function ProductDetailPage() {
                                     to={`/products/${p.id}`}
                                     className="bg-cardBg rounded-card border border-border/40 overflow-hidden card-hover shadow-sm group"
                                 >
-                                    <div className="h-32 overflow-hidden bg-mist/20">
+                                    <div className="h-32 overflow-hidden bg-mist/20 p-2">
                                         <img
                                             src={p.image}
                                             alt={p.nameBn}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                                             loading="lazy"
                                         />
                                     </div>

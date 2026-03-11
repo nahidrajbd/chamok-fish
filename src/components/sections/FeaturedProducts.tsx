@@ -17,7 +17,7 @@ const HorizontalProductCard = ({ product }: { product: ProductSpec }) => {
                 <img
                     src={product.image}
                     alt={product.nameBn}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-4"
                     loading="lazy"
                 />
                 <div className="absolute top-3 left-3 flex gap-2">

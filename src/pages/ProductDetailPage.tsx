@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import { products } from '@/data/products';
 import { siteConfig } from '@/data/siteConfig';
-import OrderForm from '@/components/forms/OrderForm';
 
 /* ── helpers ─────────────────────────────────────────────── */
 const feedTypeLabels: Record<string, string> = {
@@ -219,30 +218,25 @@ export default function ProductDetailPage() {
                                     অর্ডার করুন
                                 </h2>
                                 <p className="text-bodyGray text-sm mb-6 font-[family-name:var(--font-bengali)]">
-                                    ফর্ম পূরণ করুন, আমরা সরাসরি যোগাযোগ করব।
+                                    সরাসরি WhatsApp-এর মাধ্যমে আমাদের সাথে যোগাযোগ করে অর্ডার কনফার্ম করুন।
                                 </p>
 
-                                <OrderForm productName={product.nameBn} />
-
-                                <div className="mt-5 pt-5 border-t border-border/30 space-y-3">
-                                    <p className="text-center text-bodyGray text-xs font-[family-name:var(--font-bengali)]">
-                                        অথবা সরাসরি যোগাযোগ করুন
-                                    </p>
+                                <div className="space-y-3 mt-4">
                                     <a
-                                        href={siteConfig.whatsappUrl}
+                                        href={`${siteConfig.whatsappUrl}?text=${encodeURIComponent(`হ্যালো, আমি আপনাদের "${product.nameBn}" পণ্যটি সম্পর্কে জানতে এবং অর্ডার করতে চাচ্ছি।`)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-semibold py-3.5 rounded-xl hover:bg-[#22c55e] transition-all shadow-sm hover:shadow-md font-[family-name:var(--font-bengali)]"
+                                        className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-semibold py-4 rounded-xl hover:bg-[#22c55e] transition-all shadow-md hover:shadow-lg font-[family-name:var(--font-bengali)] text-base"
                                     >
-                                        <MessageCircle className="w-5 h-5" />
-                                        WhatsApp-এ অর্ডার করুন
+                                        <MessageCircle className="w-6 h-6" />
+                                        সরাসরি WhatsApp-এ অর্ডার
                                     </a>
                                     <a
                                         href={`tel:${siteConfig.phone}`}
-                                        className="flex items-center justify-center gap-3 w-full bg-navy text-white font-semibold py-3.5 rounded-xl hover:bg-navy/90 transition-all font-[family-name:var(--font-bengali)]"
+                                        className="flex items-center justify-center gap-3 w-full bg-navy text-white font-semibold py-4 rounded-xl hover:bg-navy/90 transition-all shadow-sm hover:shadow-md font-[family-name:var(--font-bengali)] text-base"
                                     >
-                                        <Phone className="w-5 h-5" />
-                                        {siteConfig.phoneDisplay}
+                                        <Phone className="w-6 h-6" />
+                                        কল করুন: {siteConfig.phoneDisplay}
                                     </a>
                                 </div>
                             </div>

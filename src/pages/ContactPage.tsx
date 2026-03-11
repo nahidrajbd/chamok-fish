@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Phone, MapPin, Mail, MessageCircle, Clock } from 'lucide-react';
-import ContactForm from '@/components/forms/ContactForm';
 import { siteConfig } from '@/data/siteConfig';
 
 const contactInfo = [
@@ -65,17 +64,9 @@ export default function ContactPage() {
             {/* Main Content */}
             <section className="section-padding bg-pageBg">
                 <div className="container-custom">
-                    <div className="grid lg:grid-cols-5 gap-10">
-                        {/* Form */}
-                        <div className="lg:col-span-3">
-                            <div className="bg-cardBg rounded-card p-8 border border-border/40 shadow-sm">
-                                <h2 className="text-navy font-bold text-xl mb-6 font-[family-name:var(--font-bengali)]">বার্তা পাঠান</h2>
-                                <ContactForm />
-                            </div>
-                        </div>
-
+                    <div className="max-w-2xl mx-auto space-y-4">
                         {/* Info Panel */}
-                        <div className="lg:col-span-2 space-y-4">
+                        <div className="space-y-4">
                             {contactInfo.map((info) => {
                                 const Icon = info.icon;
                                 const Tag = info.href ? 'a' : 'div';

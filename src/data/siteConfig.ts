@@ -19,6 +19,8 @@ export const siteConfig = {
     siteUrl: "https://chamakfishfeed.com.bd",
     social: {
         facebook: "https://facebook.com/chamokfishfeed",
+        instagram: "https://www.instagram.com/chamokfishfeed/",
+        pinterest: "https://www.pinterest.com/cfishfeed/",
     },
     googleMapsEmbedOffice:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.6!2d88.5642!3d24.3636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDIxJzQ4LjkiTiA4OMKwMzMnNTEuMSJF!5e0!3m2!1sen!2sbd!4v1708000000000!5m2!1sen!2sbd",

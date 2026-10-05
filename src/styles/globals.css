@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Ekush Free Bangla Font ─────────────────────────────────────────── */
+/* ── Ekush Bangla Font ─────────────────────────────────────────── */
 @font-face {
-    font-family: 'Ekush Free';
-    src: url('/fonts/EkushFree.woff2') format('woff2');
+    font-family: 'Ekush';
+    src: url('/fonts/Ekush-Regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -13,7 +13,7 @@
 
 /* ── Font CSS Variables ─────────────────────────────────────────── */
 :root {
-    --font-bengali: 'Ekush Free', sans-serif;
+    --font-bengali: 'Ekush', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
 }
 

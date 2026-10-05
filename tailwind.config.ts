@@ -22,7 +22,7 @@ const config: Config = {
             },
             fontFamily: {
                 sans: ['Poppins', 'sans-serif'],
-                bengali: ['"Hind Siliguri"', 'sans-serif'],
+                bengali: ['"Ekush Free"', 'sans-serif'],
             },
             borderRadius: {
                 card: '12px',

@@ -112,15 +112,18 @@ export default function DealerOfferPage() {
                 submittedAt: new Date().toISOString(),
             });
 
-            // Image() trick: fires a GET request that follows redirects with no CORS issues.
-            // This is the most reliable method for Google Apps Script web apps.
-            await new Promise<void>((resolve, reject) => {
-                const img = new Image();
-                img.onload = () => resolve();
-                img.onerror = () => resolve(); // Apps Script returns non-image, so onerror fires — that's OK
-                img.src = `${APPS_SCRIPT_URL}?${params.toString()}`;
-                // Fallback timeout in case neither event fires
-                setTimeout(resolve, 5000);
+            // Hidden iframe: behaves exactly like opening the URL in a browser tab.
+            // No CORS restrictions, follows redirects — the most reliable method for Apps Script.
+            await new Promise<void>((resolve) => {
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = `${APPS_SCRIPT_URL}?${params.toString()}`;
+                document.body.appendChild(iframe);
+                // Give the script 4 seconds to execute, then clean up
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                    resolve();
+                }, 4000);
             });
 
             setStatus('success');

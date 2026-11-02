@@ -13,7 +13,6 @@ import {
     Loader2,
     Send,
     AlertCircle,
-    Handshake,
 } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -171,12 +170,6 @@ export default function DealerOfferPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-5">
-                            <Handshake className="w-4 h-4 text-gold" />
-                            <span className="text-white/80 text-sm font-[family-name:var(--font-bengali)]">
-                                ডিলার আবেদন
-                            </span>
-                        </div>
                         <h1 className="text-white font-bold mb-4 font-[family-name:var(--font-bengali)]">
                             ডিলার হওয়ার আবেদন করুন
                         </h1>

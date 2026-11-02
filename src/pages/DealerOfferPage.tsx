@@ -113,10 +113,15 @@ export default function DealerOfferPage() {
                 submittedAt: new Date().toISOString(),
             });
 
-            // Apps Script requires a GET request (no-cors mode)
-            await fetch(`${APPS_SCRIPT_URL}?${params.toString()}`, {
-                method: 'GET',
-                mode: 'no-cors',
+            // Image() trick: fires a GET request that follows redirects with no CORS issues.
+            // This is the most reliable method for Google Apps Script web apps.
+            await new Promise<void>((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve();
+                img.onerror = () => resolve(); // Apps Script returns non-image, so onerror fires — that's OK
+                img.src = `${APPS_SCRIPT_URL}?${params.toString()}`;
+                // Fallback timeout in case neither event fires
+                setTimeout(resolve, 5000);
             });
 
             setStatus('success');

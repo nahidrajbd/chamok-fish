@@ -1,2 +1,6 @@
+# Legacy product URL redirects (old misspelled slug -> correct Chamok slug)
+/products/chamak-carp-grower /products/chamok-carp-grower 301
+/products/chamak-floating-feed /products/chamok-floating-feed 301
+
 # SPA routing for Cloudflare Pages
 /*    /index.html   200

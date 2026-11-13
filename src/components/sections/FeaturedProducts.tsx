@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Package, TrendingUp, Droplets, Package2 } from 'lucide-react';
 import { products, ProductSpec } from '@/data/products';
 
-// Show the 2 chamak featured products on the homepage
+// Show the 2 chamok featured products on the homepage
 const getHomePageProducts = () => {
-    const targetIds = ['chamak-carp-grower', 'chamak-floating-feed'];
+    const targetIds = ['chamok-carp-grower', 'chamok-floating-feed'];
     return products.filter(p => targetIds.includes(p.id));
 };
 
@@ -22,7 +22,7 @@ const HorizontalProductCard = ({ product }: { product: ProductSpec }) => {
                 />
                 <div className="absolute top-3 left-3 flex gap-2">
                     <span className="bg-navy text-white text-xs font-semibold px-2.5 py-1 rounded-full font-[family-name:var(--font-bengali)]">
-                        {product.brand === 'chamak' ? 'চমক' : 'বায়োটেক'}
+                        {product.brand === 'chamok' ? 'চমক' : 'বায়োটেক'}
                     </span>
                 </div>
             </div>

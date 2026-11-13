@@ -16,7 +16,7 @@ export const siteConfig = {
     factoryAddress: "ইনাম ফিড মিল, ধোপাপাড়া, পুঠিয়া, রাজশাহী",
     founder: "মো. খায়রুল বাশার",
     founderTitle: "প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক",
-    siteUrl: "https://chamakfishfeed.com.bd",
+    siteUrl: "https://chamokfish.com",
     social: {
         facebook: "https://facebook.com/chamokfishfeed",
         instagram: "https://www.instagram.com/chamokfishfeed/",

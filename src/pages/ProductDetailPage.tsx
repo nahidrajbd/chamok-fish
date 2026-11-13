@@ -31,12 +31,12 @@ const fishLabels: Record<string, string> = {
 };
 
 const brandLabel: Record<string, string> = {
-    chamak: 'চমক',
+    chamok: 'চমক',
     biotech: 'বায়োটেক',
 };
 
 const brandAccent: Record<string, string> = {
-    chamak: 'bg-navy text-white',
+    chamok: 'bg-navy text-white',
     biotech: 'bg-teal text-white',
 };
 

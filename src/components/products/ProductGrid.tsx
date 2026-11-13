@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { chamakProducts, biotechProducts } from "@/data/products";
+import { chamokProducts, biotechProducts } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 
 export default function ProductGrid() {
-    const [activeTab, setActiveTab] = useState<"chamak" | "biotech">("chamak");
+    const [activeTab, setActiveTab] = useState<"chamok" | "biotech">("chamok");
 
     const displayedProducts =
-        activeTab === "chamak" ? chamakProducts : biotechProducts;
+        activeTab === "chamok" ? chamokProducts : biotechProducts;
 
     return (
         <div>
@@ -15,8 +15,8 @@ export default function ProductGrid() {
             <div className="flex justify-center mb-10">
                 <div className="bg-panelBg border border-border/50 rounded-xl p-1.5 flex gap-1">
                     <button
-                        onClick={() => setActiveTab("chamak")}
-                        className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 font-[family-name:var(--font-bengali)] ${activeTab === "chamak"
+                        onClick={() => setActiveTab("chamok")}
+                        className={`px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 font-[family-name:var(--font-bengali)] ${activeTab === "chamok"
                             ? "bg-navy text-white shadow-md"
                             : "text-bodyGray hover:text-navy"
                             }`}
@@ -60,7 +60,7 @@ export default function ProductGrid() {
 
             {/* Product count */}
             <p className="text-center text-bodyGray text-sm mt-6 font-[family-name:var(--font-bengali)]">
-                {activeTab === "chamak" ? "চমক ফিশ ফিড" : "বায়োটেক ফিশ ফিড"} ব্র্যান্ডের{" "}
+                {activeTab === "chamok" ? "চমক ফিশ ফিড" : "বায়োটেক ফিশ ফিড"} ব্র্যান্ডের{" "}
                 {displayedProducts.length}টি পণ্য দেখাচ্ছে
             </p>
         </div>

@@ -7,7 +7,7 @@ import biotechCarpGrowerImg from '@/images/biotech-carp-grower.jpg';
 
 export type FishType = "tilapia" | "carp" | "pangas" | "nursery";
 export type FeedType = "floating" | "sinking" | "mash";
-export type Brand = "chamak" | "biotech";
+export type Brand = "chamok" | "biotech";
 
 export interface ProductSpec {
     id: string;
@@ -40,10 +40,10 @@ export interface ProductSpec {
 
 export const products: ProductSpec[] = [
     {
-        id: "chamak-carp-grower",
-        brand: "chamak",
+        id: "chamok-carp-grower",
+        brand: "chamok",
         nameBn: "চমক কার্প গ্রোয়ার",
-        nameEn: "Chamak Carp Grower",
+        nameEn: "Chamok Carp Grower",
         descriptionBn:
             "কার্প জাতীয় মাছের দ্রুত বৃদ্ধির জন্য বিশেষভাবে তৈরি ডুবন্ত পিলেট ফিড। উচ্চ প্রোটিন ও শক্তি সমৃদ্ধ।",
         feedType: "sinking",
@@ -67,10 +67,10 @@ export const products: ProductSpec[] = [
         featured: true,
     },
     {
-        id: "chamak-floating-feed",
-        brand: "chamak",
+        id: "chamok-floating-feed",
+        brand: "chamok",
         nameBn: "চমক ভাসমান ফিড (Oil Coated)",
-        nameEn: "Chamak Floating Feed (Oil Coated)",
+        nameEn: "Chamok Floating Feed (Oil Coated)",
         descriptionBn:
             "তেলাপিয়া, কার্প এবং পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি ওয়েল কোটেড ভাসমান ফিড। উচ্চ FCR নিশ্চিত করে।",
         feedType: "floating",
@@ -174,6 +174,6 @@ export const products: ProductSpec[] = [
     },
 ];
 
-export const chamakProducts = products.filter((p) => p.brand === "chamak");
+export const chamokProducts = products.filter((p) => p.brand === "chamok");
 export const biotechProducts = products.filter((p) => p.brand === "biotech");
 export const featuredProducts = products.filter((p) => p.featured);

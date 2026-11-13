@@ -5,13 +5,13 @@
 Product Requirement Document (PRD)
 Before initiating any application development, a comprehensive Product Requirement Document (PRD) is crucial. This document serves as a blueprint, detailing the application's purpose, features, and functionalities from a user's perspective. It is recommended to articulate the application's concept in simple terms to a large language model (LLM) and leverage its capabilities to generate a detailed PRD.
 
-Here is a comprehensive **Product Requirement Document (PRD)** for the Chamak Fish Feed website, built from all the brand information you have shared.
+Here is a comprehensive **Product Requirement Document (PRD)** for the Chamok Fish Feed website, built from all the brand information you have shared.
 
 ***
 
 # Product Requirement Document (PRD)
 
-## Chamak Fish Feed — Official Website
+## Chamok Fish Feed — Official Website
 
 **Version:** 1.0 | **Date:** February 2026 | **Prepared for:** Best Padma Agro Feeds
 
@@ -21,9 +21,9 @@ Here is a comprehensive **Product Requirement Document (PRD)** for the Chamak Fi
 
 | Field | Details |
 | :-- | :-- |
-| Product Name | Chamak Fish Feed Official Website |
+| Product Name | Chamok Fish Feed Official Website |
 | Company | Best Padma Agro Feeds |
-| Brand(s) | Chamak Fish Feed (Main) + Biotech Fish Feed (Associate) |
+| Brand(s) | Chamok Fish Feed (Main) + Biotech Fish Feed (Associate) |
 | Location | Rajshahi, Bangladesh (Office: Chini Patti; Factory: Dhopapara, Puthia) |
 | Contact | 01741973426 |
 | Language | Bilingual — Bengali (Primary) + English (Secondary) |
@@ -34,7 +34,7 @@ Here is a comprehensive **Product Requirement Document (PRD)** for the Chamak Fi
 
 ## 2. Goals \& Objectives
 
-- Establish a **credible digital presence** for Chamak Fish Feed among fish farmers in Rajshahi and across Bangladesh.
+- Establish a **credible digital presence** for Chamok Fish Feed among fish farmers in Rajshahi and across Bangladesh.
 - **Generate dealer/distributor inquiries** through a clear product catalog and contact CTA.
 - **Educate farmers** on proper fish feed usage, nutrition specifications, and best practices.
 - Build brand trust by highlighting the factory, founder, and production quality.
@@ -61,7 +61,7 @@ Here is a comprehensive **Product Requirement Document (PRD)** for the Chamak Fi
 - Hero section: Brand tagline + CTA ("আমাদের পণ্য দেখুন" / "Dealer হন")
 - About snapshot (3 lines + link)
 - Product highlights (2–3 featured cards)
-- Why Chamak? (3–4 icon-based benefit points)
+- Why Chamok? (3–4 icon-based benefit points)
 - Testimonial / farmer quote section
 - Call-to-action strip: phone number + WhatsApp button
 
@@ -77,9 +77,9 @@ Here is a comprehensive **Product Requirement Document (PRD)** for the Chamak Fi
 
 ### 4.3 Products
 
-**Brand selector tab: Chamak | Biotech**
+**Brand selector tab: Chamok | Biotech**
 
-**Chamak Fish Feed:**
+**Chamok Fish Feed:**
 
 - Carp Grower (Sinking) — spec card
 - Floating Feed (Oil Coated) — spec card with tilapia/pangas/carp variants
@@ -100,7 +100,7 @@ Each product card includes:
 - CTA: "অর্ডার করুন / Inquire Now"
 
 
-### 4.4 Why Chamak? (USP Page)
+### 4.4 Why Chamok? (USP Page)
 
 - Oil-coated floating feed advantage
 - Low FCR (Food Conversion Ratio) explanation
@@ -187,7 +187,7 @@ Each product card includes:
 | Styling | Tailwind CSS |
 | CMS (Blog) | Sanity.io or simple Markdown |
 | Hosting | Vercel or shared cPanel hosting |
-| Domain | chamakfishfeed.com.bd (recommended) |
+| Domain | chamokfish.com (recommended) |
 | Form backend | EmailJS or Formspree |
 | Analytics | Google Analytics 4 + Search Console |
 | Live chat | Tawk.to (optional, Phase 2) |

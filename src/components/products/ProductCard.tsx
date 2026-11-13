@@ -31,12 +31,12 @@ function getProteinDisplay(protein: ProductSpec['protein']): string {
 }
 
 const brandBadge: Record<string, string> = {
-    chamak: 'bg-navy text-white',
+    chamok: 'bg-navy text-white',
     biotech: 'bg-teal text-white',
 };
 
 const brandLabel: Record<string, string> = {
-    chamak: 'চমক',
+    chamok: 'চমক',
     biotech: 'বায়োটেক',
 };
 

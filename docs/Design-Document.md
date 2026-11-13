@@ -4,13 +4,13 @@
 
 A Design Document translates the PRD's requirements into visual and interactive specifications. This involves selecting an inspirational design from platforms such as Dribbble or Mobbin and then using that inspiration to guide the creation of a detailed design document by sharing the link to gemini and asking it to make a design doc based on that. This document typically includes wireframes, mockups, and user interface (UI) specifications.
 
-Here is the complete **Design Document** for the Chamak Fish Feed website, with curated Dribbble/Mobbin inspiration links and full UI specifications ready to paste into Figma or hand to your developer.[^1][^2][^3]
+Here is the complete **Design Document** for the Chamok Fish Feed website, with curated Dribbble/Mobbin inspiration links and full UI specifications ready to paste into Figma or hand to your developer.[^1][^2][^3]
 
 ***
 
 # Design Document (DD)
 
-## Chamak Fish Feed — Official Website
+## Chamok Fish Feed — Official Website
 
 **Version:** 1.0 | **Date:** February 2026 | **Based on PRD v1.0**
 
@@ -30,7 +30,7 @@ Use these links to brief Gemini or guide your Figma work:[^2][^3][^1]
 | Land-book Gallery | https://land-book.com | Full landing page references for premium agro brands |
 
 > **Gemini Prompt to generate your design doc from inspiration:**
-> *"Here is the link to a website design I find inspiring: [paste Dribbble/Mobbin link]. Based on this visual style, generate a detailed UI Design Document for a fish feed company website called 'Chamak Fish Feed' in Bangladesh. The brand colors are Navy \#1A2433, Teal \#2A8A8A, Background \#F8FAFA, Gold \#FFB703. The font is Poppins. The site has these pages: Homepage, About, Products, Why Chamak, Dealer Network, Contact."*
+> *"Here is the link to a website design I find inspiring: [paste Dribbble/Mobbin link]. Based on this visual style, generate a detailed UI Design Document for a fish feed company website called 'Chamok Fish Feed' in Bangladesh. The brand colors are Navy \#1A2433, Teal \#2A8A8A, Background \#F8FAFA, Gold \#FFB703. The font is Poppins. The site has these pages: Homepage, About, Products, Why Chamok, Dealer Network, Contact."*
 
 ***
 
@@ -102,7 +102,7 @@ Use these links to brief Gemini or guide your Figma work:[^2][^3][^1]
 └─────────────────────────────┘
 ```
 
-**Why Chamak Icon Card:**
+**Why Chamok Icon Card:**
 
 ```
 ┌─────────────────┐
@@ -155,7 +155,7 @@ Use these links to brief Gemini or guide your Figma work:[^2][^3][^1]
 │  [Card] [Card] [Card]            │
 │  + "সব পণ্য দেখুন" button        │
 ├──────────────────────────────────┤
-│  WHY CHAMAK (4 icon cards)       │
+│  WHY CHAMOK (4 icon cards)       │
 │  Oil Coated | Low FCR | Fresh    │
 │  Stock | Local Made              │
 ├──────────────────────────────────┤
@@ -225,7 +225,7 @@ Use these links to brief Gemini or guide your Figma work:[^2][^3][^1]
 - [ ] Favicon: 32×32px and 180×180px (Apple touch icon)
 - [ ] Hero image: 1440×800px (desktop), 768×500px (tablet), 375×400px (mobile)
 - [ ] Factory photo: Inam Feed Mill, Dhopapara, Puthia
-- [ ] Product bag photos: Chamak Carp Grower, Chamak Floating, Biotech bags
+- [ ] Product bag photos: Chamok Carp Grower, Chamok Floating, Biotech bags
 - [ ] Founder photo: মো. খায়রুল বাশার
 - [ ] Icons: 6–8 solid rounded icons (fish, pellet, leaf, shield, phone, location)
 - [ ] OG Image: 1200×630px branded image for social sharing
@@ -235,7 +235,7 @@ Use these links to brief Gemini or guide your Figma work:[^2][^3][^1]
 ## 9. Figma File Structure (Recommended)
 
 ```
-📁 Chamak Fish Feed — Design
+📁 Chamok Fish Feed — Design
   ├── 🎨 Styles (Colors, Typography, Shadows)
   ├── 🧩 Components (Buttons, Cards, Nav, Footer)
   ├── 📱 Mobile Screens (375px)

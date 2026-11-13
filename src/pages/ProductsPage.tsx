@@ -6,11 +6,11 @@ import { ProductCard } from '@/components/products/ProductCard';
 import { products } from '@/data/products';
 import { siteConfig } from '@/data/siteConfig';
 
-type Brand = 'all' | 'chamak' | 'biotech';
+type Brand = 'all' | 'chamok' | 'biotech';
 
 const tabs: { value: Brand; label: string }[] = [
     { value: 'all', label: 'সব পণ্য' },
-    { value: 'chamak', label: 'চমক ব্র্যান্ড' },
+    { value: 'chamok', label: 'চমক ব্র্যান্ড' },
     { value: 'biotech', label: 'বায়োটেক ব্র্যান্ড' },
 ];
 

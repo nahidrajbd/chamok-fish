@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/sections/HeroSection';
 
 import FeaturedProducts from '@/components/sections/FeaturedProducts';
-import WhyChamakSection from '@/components/sections/WhyChamak';
+import WhyChamokSection from '@/components/sections/WhyChamok';
 import AboutSnapshot from '@/components/sections/AboutSnapshot';
 import Testimonial from '@/components/sections/Testimonial';
 import DealerCTA from '@/components/sections/DealerCTA';
@@ -25,7 +25,7 @@ export default function HomePage() {
             <HeroSection />
 
             <FeaturedProducts />
-            <WhyChamakSection />
+            <WhyChamokSection />
             <AboutSnapshot />
             <Testimonial />
             <DealerCTA />

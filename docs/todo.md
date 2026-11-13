@@ -9,8 +9,8 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 ***
 
 ```markdown
-# todo.md — Chamak Fish Feed Website
-**Project:** Best Padma Agro Feeds — Chamak Fish Feed Official Website
+# todo.md — Chamok Fish Feed Website
+**Project:** Best Padma Agro Feeds — Chamok Fish Feed Official Website
 **Stack:** Next.js 14 (Static Export) + Tailwind CSS + TypeScript + Cloudflare Pages
 **Ref docs:** PRD v1.0 | DD v1.0 | TECH_RULES v1.0
 **Last updated:** February 2026
@@ -19,7 +19,7 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 
 ## PHASE 0 — Project Setup
 - [ ] Initialize Next.js 14 project with TypeScript
-      `pnpx create-next-app@latest chamak-fish-feed --typescript --tailwind --app`
+      `pnpx create-next-app@latest chamok-fish-feed --typescript --tailwind --app`
 - [ ] Configure `output: 'export'` in `next.config.ts` for Cloudflare Pages
 - [ ] Install dependencies:
       `pnpm add framer-motion lucide-react next-seo emailjs-browser`
@@ -48,8 +48,8 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 - [ ] Create `src/data/products.ts`
       Define `ProductSpec` TypeScript interface
       Add all 5 products:
-      - [ ] Chamak Carp Grower (Sinking, 3.5mm, 25kg)
-      - [ ] Chamak Floating Feed Oil Coated (Tilapia 30% / Pangas 28% / Carp 23%, 25kg)
+      - [ ] Chamok Carp Grower (Sinking, 3.5mm, 25kg)
+      - [ ] Chamok Floating Feed Oil Coated (Tilapia 30% / Pangas 28% / Carp 23%, 25kg)
       - [ ] Biotech Nursery / Carp Care (Mash, 36% protein, 20kg)
       - [ ] Biotech Floating Grower (Tilapia/Carp/Pangas, 3mm–4mm, 20kg)
       - [ ] Biotech Carp Grower Premium (24%) + Economy (22%) (25kg)
@@ -94,7 +94,7 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 - [ ] Build `FeaturedProducts.tsx`
       - [ ] Show 3 featured product cards (horizontal scroll on mobile)
       - [ ] "সব পণ্য দেখুন" link to /products
-- [ ] Build `WhyChamak.tsx`
+- [ ] Build `WhyChamok.tsx`
       - [ ] 4 icon cards: Oil Coated | Low FCR | Fresh Stock | Local Made
       - [ ] Teal solid Lucide icons, 48px
       - [ ] Framer Motion stagger animation on scroll
@@ -127,7 +127,7 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
       - [ ] Filters by brand using tab switcher
 - [ ] Build `PDFDownloadStrip.tsx`
       - [ ] "সম্পূর্ণ পণ্য তালিকা ডাউনলোড করুন" button
-      - [ ] Links to `/public/chamak-product-catalog.pdf`
+      - [ ] Links to `/public/chamok-product-catalog.pdf`
 - [ ] Assemble in `app/products/page.tsx`
 
 ---
@@ -142,8 +142,8 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 
 ---
 
-## PHASE 6 — Why Chamak Page
-- [ ] Build `app/why-chamak/page.tsx`
+## PHASE 6 — Why Chamok Page
+- [ ] Build `app/why-chamok/page.tsx`
       - [ ] Oil-coated floating feed benefit section
       - [ ] FCR explanation with visual/icon
       - [ ] Zero wastage + environment-friendly section
@@ -187,7 +187,7 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
       - [ ] Homepage (Bengali keywords: ভাসমান ফিশ ফিড, কার্প ফিড)
       - [ ] Products page
       - [ ] About page
-      - [ ] Why Chamak page
+      - [ ] Why Chamok page
       - [ ] Dealers page
       - [ ] Contact page
 - [ ] Add `Organization` JSON-LD structured data to Homepage
@@ -222,7 +222,7 @@ Here is the complete `todo.md` file based on the PRD, Design Document, and Tech 
 - [ ] Test all CTAs and internal links (no broken links)
 - [ ] Test Google Maps embed loads on Contact + Dealers pages
 - [ ] Verify Cloudflare Pages production deployment is live
-- [ ] Connect custom domain (chamakfishfeed.com.bd or similar)
+- [ ] Connect custom domain (chamokfish.com or similar)
 - [ ] Verify SSL certificate is active (HTTPS)
 - [ ] Submit sitemap to Google Search Console
 - [ ] Final Lighthouse audit on live production URL

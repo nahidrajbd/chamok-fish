@@ -4,13 +4,13 @@
 
 Defining the technical rules and the technology stack is a foundational step that dictates the tools, frameworks, languages, and platforms to be used throughout the project. This ensures consistency, compatibility, and scalability. The tech rules should clearly outline the chosen technologies and any specific guidelines for their implementation.
 
-Here is the complete **Tech Stack Definition \& Technical Rules Document** for the Chamak Fish Feed website.
+Here is the complete **Tech Stack Definition \& Technical Rules Document** for the Chamok Fish Feed website.
 
 ***
 
 # Tech Stack Definition \& Technical Rules
 
-## Chamak Fish Feed — Official Website
+## Chamok Fish Feed — Official Website
 
 **Version:** 1.0 | **Date:** February 2026 | **Ref:** PRD v1.0 + DD v1.0
 
@@ -69,7 +69,7 @@ Here is the complete **Tech Stack Definition \& Technical Rules Document** for t
 ## 3. Project Folder Structure
 
 ```
-chamak-fish-feed/
+chamok-fish-feed/
 ├── public/
 │   ├── images/          ← Product photos, hero, factory, founder
 │   ├── icons/           ← SVG icons and favicon
@@ -83,7 +83,7 @@ chamak-fish-feed/
 │   │   │   └── page.tsx
 │   │   ├── products/
 │   │   │   └── page.tsx
-│   │   ├── why-chamak/
+│   │   ├── why-chamok/
 │   │   │   └── page.tsx
 │   │   ├── dealers/
 │   │   │   └── page.tsx
@@ -101,7 +101,7 @@ chamak-fish-feed/
 │   │   ├── sections/    ← Homepage section components
 │   │   │   ├── HeroSection.tsx
 │   │   │   ├── FeaturedProducts.tsx
-│   │   │   ├── WhyChamak.tsx
+│   │   │   ├── WhyChamok.tsx
 │   │   │   ├── AboutSnapshot.tsx
 │   │   │   ├── Testimonial.tsx
 │   │   │   └── CTAStrip.tsx
@@ -169,7 +169,7 @@ theme: {
 // src/data/products.ts
 export type FishType = 'tilapia' | 'carp' | 'pangas';
 export type FeedType = 'floating' | 'sinking' | 'mash';
-export type Brand = 'chamak' | 'biotech';
+export type Brand = 'chamok' | 'biotech';
 
 export interface ProductSpec {
   id:           string;
@@ -191,7 +191,7 @@ export interface ProductSpec {
   energy?:      string;       // "2900-3000 kcal/kg"
   features:     string[];     // ["Oil coated", "High FCR"]
   suitableFor:  FishType[];
-  image:        string;       // "/images/products/chamak-carp-grower.jpg"
+  image:        string;       // "/images/products/chamok-carp-grower.jpg"
 }
 ```
 

@@ -9,7 +9,7 @@ I have updated the "Featured Products" section on the homepage to display only t
 
 ## Changes
 ### `src/components/sections/FeaturedProducts.tsx`
-- **Replaced logic**: Instead of importing `featuredProducts` from data, I created a filtering function `getHomePageProducts` to select the two specific IDs (`chamak-carp-grower`, `chamak-floating-feed`).
+- **Replaced logic**: Instead of importing `featuredProducts` from data, I created a filtering function `getHomePageProducts` to select the two specific IDs (`chamok-carp-grower`, `chamok-floating-feed`).
 - **Imported Images**: Imported the requested images and overrode the product object's `image` property.
 - **New Component**: Created `HorizontalProductCard` internally.
   - Uses `grid-cols-5`.

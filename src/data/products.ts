@@ -72,7 +72,7 @@ export const products: ProductSpec[] = [
         nameBn: "চমক ভাসমান ফিড (Oil Coated)",
         nameEn: "Chamok Floating Feed (Oil Coated)",
         descriptionBn:
-            "তেলাপিয়া, কার্প এবং পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি ওয়েল কোটেড ভাসমান ফিড। উচ্চ FCR নিশ্চিত করে।",
+            "তেলাপিয়া, কার্প এবং পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি ওয়েল কোটেড ভাসমান ফিড। সঠিক ব্যবস্থাপনায় ভালো FCR পেতে সাহায্য করে।",
         feedType: "floating",
         pelletSizeMm: null,
         packKg: 25,
@@ -88,7 +88,7 @@ export const products: ProductSpec[] = [
             "ওয়েল কোটেড",
             "ভাসমান ফিড",
             "খাদ্যের অপচয় নেই",
-            "উচ্চ FCR নিশ্চিত",
+            "সঠিক ব্যবস্থাপনায় ভালো FCR পেতে সাহায্য করে",
         ],
         suitableFor: ["tilapia", "carp", "pangas"],
         image: chamokVasomanFeedImg,

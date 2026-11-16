@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
+import { organizationJsonLd } from '@/data/jsonLd';
 import HeroSection from '@/components/sections/HeroSection';
 
 import FeaturedProducts from '@/components/sections/FeaturedProducts';
@@ -12,15 +13,7 @@ import { siteConfig } from '@/data/siteConfig';
 export default function HomePage() {
     return (
         <>
-            <Helmet>
-                <title>{siteConfig.seo.defaultTitle}</title>
-                <meta name="description" content={siteConfig.seo.defaultDescription} />
-                <meta property="og:title" content={siteConfig.seo.defaultTitle} />
-                <meta property="og:description" content={siteConfig.seo.defaultDescription} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={siteConfig.siteUrl} />
-                <link rel="canonical" href={siteConfig.siteUrl} />
-            </Helmet>
+            <Seo title={siteConfig.seo.defaultTitle} description={siteConfig.seo.defaultDescription} path="/" jsonLd={organizationJsonLd} />
 
             <HeroSection />
 

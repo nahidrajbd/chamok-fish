@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { MapPin, Users, MessageCircle, CheckCircle, TrendingUp, Handshake, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import CTAStrip from '@/components/sections/CTAStrip';
@@ -22,11 +22,7 @@ const requirements = [
 export default function DealersPage() {
     return (
         <>
-            <Helmet>
-                <title>ডিলার নেটওয়ার্ক — চমক ফিশ ফিড রাজশাহী</title>
-                <meta name="description" content="চমক ফিশ ফিডের রাজশাহী বিভাগের ডিলার তালিকা। আপনার কাছের ডিলার খুঁজুন অথবা নতুন ডিলার হওয়ার জন্য WhatsApp-এ যোগাযোগ করুন।" />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/dealers`} />
-            </Helmet>
+            <Seo title="ডিলার নেটওয়ার্ক | Fish Feed Dealers in Rajshahi, Chamok Fish Feed" description="চমক ফিশ ফিডের রাজশাহী বিভাগের ডিলার তালিকা। আপনার কাছের ডিলার খুঁজুন অথবা নতুন ডিলার হওয়ার জন্য WhatsApp-এ যোগাযোগ করুন।" path="/dealers" />
 
             {/* ── Hero ─────────────────────────────────────────── */}
             <section className="bg-navy py-20 relative overflow-hidden">

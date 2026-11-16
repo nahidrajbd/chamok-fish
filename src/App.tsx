@@ -12,6 +12,7 @@ import CeoPage from '@/pages/CeoPage';
 import DealersPage from '@/pages/DealersPage';
 import ContactPage from '@/pages/ContactPage';
 import DealerOfferPage from '@/pages/DealerOfferPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 import ScrollToTop from '@/components/layout/ScrollToTop';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
                         <Route path="/dealers" element={<DealersPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/dealer-offer" element={<DealerOfferPage />} />
+                        <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </main>
                 <Footer />

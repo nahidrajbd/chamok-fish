@@ -21,15 +21,18 @@ export const siteConfig = {
         facebook: "https://facebook.com/chamokfishfeed",
         instagram: "https://www.instagram.com/chamokfishfeed/",
         pinterest: "https://www.pinterest.com/cfishfeed/",
+        tiktok: "https://www.tiktok.com/@chamakfishfeed",
+        youtube: "https://www.youtube.com/@ChamakFishFeed",
+        x: "https://x.com/ChamakFishFeed",
     },
     googleMapsEmbedOffice:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.6!2d88.5642!3d24.3636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDIxJzQ4LjkiTiA4OMKwMzMnNTEuMSJF!5e0!3m2!1sen!2sbd!4v1708000000000!5m2!1sen!2sbd",
     googleMapsEmbedFactory:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.5!2d88.6050!3d24.3100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDE4JzM2LjAiTiA4OMKwMzYnMTguMCJF!5e0!3m2!1sen!2sbd!4v1708000000001!5m2!1sen!2sbd",
     seo: {
-        defaultTitle: "চমক ফিশ ফিড | বেস্ট পদ্মা এগ্রো ফিডস",
+        defaultTitle: "চমক ফিশ ফিড | Chamok Fish Feed, মাছের খাবার রাজশাহী",
         defaultDescription:
             "চমক ফিশ ফিড — বাংলাদেশের মৎস্য চাষির বিশ্বস্ত সঙ্গী। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য উচ্চমানের ভাসমান ও ডুবন্ত ফিড। রাজশাহী থেকে সরাসরি উৎপাদিত।",
-        ogImage: "/og-image.jpg",
+        ogImage: "https://chamokfish.com/hero-banner.jpg",
     },
 };

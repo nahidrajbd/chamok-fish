@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Facebook, Mail, Instagram } from 'lucide-react';
+import { Phone, MapPin, Facebook, Mail, Instagram, Youtube, Twitter } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
 const quickLinks = [
     { href: '/', label: 'হোম' },
     { href: '/products', label: 'পণ্যসমূহ' },
-    { href: '/why-chamok', label: 'কেন চমক?' },
     { href: '/about', label: 'আমাদের সম্পর্কে' },
     { href: '/dealers', label: 'ডিলার নেটওয়ার্ক' },
     { href: '/contact', label: 'যোগাযোগ' },
@@ -52,6 +51,24 @@ export default function Footer() {
                                 aria-label="Instagram"
                             >
                                 <Instagram className="w-4 h-4" />
+                            </a>
+                            <a
+                                href={siteConfig.social.youtube}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#FF0000] flex items-center justify-center transition-colors"
+                                aria-label="YouTube"
+                            >
+                                <Youtube className="w-4 h-4" />
+                            </a>
+                            <a
+                                href={siteConfig.social.x}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-black flex items-center justify-center transition-colors"
+                                aria-label="X (Twitter)"
+                            >
+                                <Twitter className="w-4 h-4" />
                             </a>
                             <a
                                 href={siteConfig.social.pinterest}

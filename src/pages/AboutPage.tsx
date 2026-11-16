@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { motion } from 'framer-motion';
 import {
     Users, Factory, MapPin, Phone, Mail,
@@ -101,14 +101,7 @@ export default function AboutPage() {
 
     return (
         <>
-            <Helmet>
-                <title>আমাদের সম্পর্কে — চমক ফিশ ফিড | বেস্ট পদ্মা এগ্রো ফিডস</title>
-                <meta
-                    name="description"
-                    content="বেস্ট পদ্মা এগ্রো ফিডস ও চমক ফিশ ফিডের পূর্ণ পরিচয় — প্রতিষ্ঠাতা, কারখানা, ব্র্যান্ড ইতিহাস এবং আমাদের দলের সাথে পরিচিত হন।"
-                />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/about`} />
-            </Helmet>
+            <Seo title="আমাদের সম্পর্কে | About Chamok Fish Feed, Best Padma Agro Feeds" description="বেস্ট পদ্মা এগ্রো ফিডস ও চমক ফিশ ফিডের পূর্ণ পরিচয় — প্রতিষ্ঠাতা, কারখানা, ব্র্যান্ড ইতিহাস এবং আমাদের দলের সাথে পরিচিত হন।" path="/about" />
 
             {/* ── Hero Banner ─────────────────────────────────────── */}
             <section className="relative bg-navy overflow-hidden py-24">

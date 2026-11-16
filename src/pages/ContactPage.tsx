@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { Phone, MapPin, Mail, MessageCircle, Clock } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -41,11 +41,7 @@ const contactInfo = [
 export default function ContactPage() {
     return (
         <>
-            <Helmet>
-                <title>যোগাযোগ করুন — চমক ফিশ ফিড</title>
-                <meta name="description" content="চমক ফিশ ফিডের সাথে যোগাযোগ করুন। ফোন, WhatsApp বা ফর্মের মাধ্যমে পণ্যের তথ্য, অর্ডার ও ডিলার সম্পর্কে জানুন।" />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/contact`} />
-            </Helmet>
+            <Seo title="যোগাযোগ | Contact Chamok Fish Feed, Rajshahi" description="চমক ফিশ ফিডের সাথে যোগাযোগ করুন। ফোন, WhatsApp বা ফর্মের মাধ্যমে পণ্যের তথ্য, অর্ডার ও ডিলার সম্পর্কে জানুন।" path="/contact" />
 
             {/* Header */}
             <section className="bg-navy py-16">

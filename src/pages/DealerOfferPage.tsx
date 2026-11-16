@@ -1,5 +1,5 @@
+import Seo from '@/components/Seo';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     User,
@@ -14,7 +14,6 @@ import {
     Send,
     AlertCircle,
 } from 'lucide-react';
-import { siteConfig } from '@/data/siteConfig';
 
 // ── Google Apps Script Web App URL ────────────────────────────────────────
 // Replace this with your deployed Apps Script URL
@@ -149,14 +148,7 @@ export default function DealerOfferPage() {
     // ── Render ────────────────────────────────────────────────────────────
     return (
         <>
-            <Helmet>
-                <title>ডিলার আবেদন ফর্ম — চমক ফিশ ফিড</title>
-                <meta
-                    name="description"
-                    content="চমক ফিশ ফিডের ডিলার হওয়ার জন্য আবেদন করুন। আপনার ব্যক্তিগত ও ব্যবসায়িক তথ্য পূরণ করে সাবমিট করুন।"
-                />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/dealer-offer`} />
-            </Helmet>
+            <Seo title="ডিলার আবেদন | Become a Fish Feed Dealer, Chamok Fish Feed" description="চমক ফিশ ফিডের ডিলার হওয়ার জন্য আবেদন করুন। আপনার ব্যক্তিগত ও ব্যবসায়িক তথ্য পূরণ করে সাবমিট করুন।" path="/dealer-offer" />
 
             {/* ── Hero ──────────────────────────────────────────────────── */}
             <section className="bg-navy py-20 relative overflow-hidden">

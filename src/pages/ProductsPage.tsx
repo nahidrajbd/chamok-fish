@@ -1,10 +1,9 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, Package } from 'lucide-react';
 import { ProductCard } from '@/components/products/ProductCard';
 import { products } from '@/data/products';
-import { siteConfig } from '@/data/siteConfig';
 
 type Brand = 'all' | 'chamok' | 'biotech';
 
@@ -20,11 +19,7 @@ export default function ProductsPage() {
 
     return (
         <>
-            <Helmet>
-                <title>পণ্যসমূহ — চমক ফিশ ফিড রাজশাহী</title>
-                <meta name="description" content="চমক ও বায়োটেক ব্র্যান্ডের ভাসমান ও ডুবন্ত মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি।" />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/products`} />
-            </Helmet>
+            <Seo title="ফিশ ফিড পণ্যসমূহ | Fish Feed Products, Chamok Fish Feed" description="চমক ও বায়োটেক ব্র্যান্ডের ভাসমান ও ডুবন্ত মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি।" path="/products" />
 
             {/* Header */}
             <section className="bg-navy py-16">

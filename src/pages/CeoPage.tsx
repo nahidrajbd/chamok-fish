@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { motion } from 'framer-motion';
 import { Phone, Mail, Facebook, Quote } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
@@ -28,14 +28,7 @@ const FadeIn = ({
 export default function CeoPage() {
     return (
         <>
-            <Helmet>
-                <title>মো. খায়রুল বাশার — প্রতিষ্ঠাতা | চমক ফিশ ফিড</title>
-                <meta
-                    name="description"
-                    content="মো. খায়রুল বাশার — বেস্ট পদ্মা এগ্রো ফিডস ও চমক ফিশ ফিডের প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক। তাঁর জীবনী, উদ্যোক্তা যাত্রা এবং দর্শন সম্পর্কে জানুন।"
-                />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/ceo`} />
-            </Helmet>
+            <Seo title="মো. খায়রুল বাশার | Founder of Chamok Fish Feed" description="মো. খায়রুল বাশার — বেস্ট পদ্মা এগ্রো ফিডস ও চমক ফিশ ফিডের প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক। তাঁর জীবনী, উদ্যোক্তা যাত্রা এবং দর্শন সম্পর্কে জানুন।" path="/ceo" />
 
             {/* ── Thin top bar ────────────────────────────────── */}
             <div className="bg-navy h-1 w-full" />

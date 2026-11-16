@@ -1,5 +1,6 @@
+import Seo from '@/components/Seo';
+import { productJsonLd, breadcrumbJsonLd } from '@/data/jsonLd';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
     ArrowLeft,
@@ -85,20 +86,7 @@ export default function ProductDetailPage() {
 
     return (
         <>
-            <Helmet>
-                <title>{product.nameBn} — চমক ফিশ ফিড রাজশাহী</title>
-                <meta
-                    name="description"
-                    content={`${product.nameBn}: ${product.descriptionBn} মৎস্য খামারিদের জন্য সেরা মানের ফিড।`}
-                />
-                <link rel="canonical" href={`${siteConfig.siteUrl}/products/${product.id}`} />
-                {/* Open Graph for marketing share */}
-                <meta property="og:title" content={`${product.nameBn} — চমক ফিশ ফিড`} />
-                <meta property="og:description" content={product.descriptionBn} />
-                <meta property="og:image" content={product.image} />
-                <meta property="og:url" content={`${siteConfig.siteUrl}/products/${product.id}`} />
-                <meta property="og:type" content="product" />
-            </Helmet>
+            <Seo title={`${product.nameBn} | ${product.nameEn} - Chamok Fish Feed`} description={`${product.nameBn}: ${product.descriptionBn} মৎস্য খামারিদের জন্য সেরা মানের ফিড।`} path={`/products/${product.id}`} image={`${siteConfig.siteUrl}${product.image}`} type="product" jsonLd={[productJsonLd(product), breadcrumbJsonLd([["হোম", "/"], ["পণ্যসমূহ", "/products"], [product.nameBn, `/products/${product.id}`]])]} />
 
             {/* ── Hero banner ───────────────────────────────── */}
             <section className="bg-navy py-10">

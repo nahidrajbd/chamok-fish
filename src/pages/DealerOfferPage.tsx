@@ -17,7 +17,7 @@ import {
 
 // ── Google Apps Script Web App URL ────────────────────────────────────────
 // Replace this with your deployed Apps Script URL
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxXn1ZHF-nOKmqARkRjXU_UoLRlV503XWLu67oJH4cb_79sEIBphTvImhiFWcKKWwio/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz0uD_SduOyk2s28jRYk-DxUKHSmj-C8RnOnkvY546Zc2_14_4GqrvQScuRKbI9CEQ/exec';
 
 // ── Types ─────────────────────────────────────────────────────────────────
 interface FormData {

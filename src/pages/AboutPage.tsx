@@ -9,64 +9,6 @@ import { siteConfig } from '@/data/siteConfig';
 import basharPhoto from '@/images/bashar.png';
 import feedsPond from '@/images/feeds-pond.jpg';
 
-/* ── Team data ───────────────────────────────────────────────── */
-const team = [
-    {
-        name: 'মো. খায়রুল বাশার',
-        nameEn: 'Md. Khairul Bashar',
-        title: 'প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক',
-        titleEn: 'Founder & Managing Director',
-        initials: 'KB',
-        dept: 'নেতৃত্ব',
-        photo: basharPhoto,
-    },
-    {
-        name: 'মো. রফিকুল ইসলাম',
-        nameEn: 'Md. Rafiqul Islam',
-        title: 'বিক্রয় ব্যবস্থাপক',
-        titleEn: 'Sales Manager',
-        initials: 'RI',
-        dept: 'বিক্রয় ও বিপণন',
-        photo: null,
-    },
-    {
-        name: 'মো. আনোয়ার হোসেন',
-        nameEn: 'Md. Anwar Hossain',
-        title: 'কারখানা সুপারভাইজার',
-        titleEn: 'Factory Supervisor',
-        initials: 'AH',
-        dept: 'উৎপাদন',
-        photo: null,
-    },
-    {
-        name: 'মোছা. শাহিনা বেগম',
-        nameEn: 'Mst. Shahina Begum',
-        title: 'মান নিয়ন্ত্রণ কর্মকর্তা',
-        titleEn: 'Quality Control Officer',
-        initials: 'SB',
-        dept: 'মান নিয়ন্ত্রণ',
-        photo: null,
-    },
-    {
-        name: 'মো. জাহিদুল ইসলাম',
-        nameEn: 'Md. Zahidul Islam',
-        title: 'হিসাব রক্ষণ কর্মকর্তা',
-        titleEn: 'Accounts Officer',
-        initials: 'ZI',
-        dept: 'অর্থ ও হিসাব',
-        photo: null,
-    },
-    {
-        name: 'মো. মামুনুর রশিদ',
-        nameEn: 'Md. Mamunur Rashid',
-        title: 'ডিলার সম্পর্ক ব্যবস্থাপক',
-        titleEn: 'Dealer Relations Manager',
-        initials: 'MR',
-        dept: 'ডিলার নেটওয়ার্ক',
-        photo: null,
-    },
-];
-
 /* ══════════════════════════════════════════════════════════════ */
 export default function AboutPage() {
 
@@ -266,47 +208,6 @@ export default function AboutPage() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Team Members ─────────────────────────────────────── */}
-            <section className="section-padding bg-pageBg">
-                <div className="container-custom">
-                    <div className="text-center mb-12">
-                        <div className="w-8 h-[3px] bg-gold rounded-full mb-4 mx-auto" />
-                        <h2 className="text-navy font-semibold font-[family-name:var(--font-bengali)]">যাঁদের নিয়ে আমরা</h2>
-                        <p className="text-bodyGray mt-3 max-w-xl mx-auto text-sm font-[family-name:var(--font-bengali)]">
-                            প্রতিভাবান ও নিবেদিতপ্রাণ একটি দল প্রতিদিন পরিশ্রম করে চমক ফিশ ফিডকে এগিয়ে নিয়ে যাচ্ছে।
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {team.map((member) => (
-                            <div key={member.name} className="bg-white rounded-xl overflow-hidden border border-navy/10">
-                                {/* Avatar area */}
-                                <div className="relative h-44 bg-navy flex items-center justify-center overflow-hidden">
-                                    {member.photo ? (
-                                        <img
-                                            src={member.photo}
-                                            alt={member.name}
-                                            className="w-full h-full object-cover object-top"
-                                            loading="lazy"
-                                        />
-                                    ) : (
-                                        <span className="text-white font-semibold text-3xl">{member.initials}</span>
-                                    )}
-                                </div>
-
-                                {/* Info */}
-                                <div className="p-5">
-                                    <h3 className="text-navy font-semibold text-base font-[family-name:var(--font-bengali)]">{member.name}</h3>
-                                    <p className="text-teal text-xs mt-0.5 mb-1 font-[family-name:var(--font-bengali)]">{member.title}</p>
-                                    <p className="text-bodyGray/60 text-xs">{member.nameEn} · {member.titleEn}</p>
-                                    <p className="text-bodyGray text-xs mt-2 font-[family-name:var(--font-bengali)]">{member.dept}</p>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>

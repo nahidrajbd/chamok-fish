@@ -33,7 +33,7 @@ export default function Navbar() {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled
                     ? 'bg-white/95 backdrop-blur-md shadow-md'
                     : 'bg-white/90 backdrop-blur-sm shadow-sm'
                     }`}
@@ -44,7 +44,7 @@ export default function Navbar() {
                         <Link to="/" className="flex items-center gap-3 shrink-0">
                             <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-10 sm:h-12 sm:w-12" />
                             <div className="hidden sm:block">
-                                <p className="text-navy font-bold text-lg leading-tight font-[family-name:var(--font-bengali)]">
+                                <p className="text-navy font-semibold text-lg leading-tight font-[family-name:var(--font-bengali)]">
                                     চমক ফিশ ফিড
                                 </p>
                                 <p className="text-teal text-[11px] leading-tight font-medium">Best Padma Agro Feeds</p>
@@ -59,7 +59,7 @@ export default function Navbar() {
                                     <Link
                                         key={link.href}
                                         to={link.href}
-                                        className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 font-[family-name:var(--font-bengali)] ${isActive ? 'text-teal' : 'text-dark hover:text-teal hover:bg-mist'
+                                        className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 font-[family-name:var(--font-bengali)] ${isActive ? 'text-teal' : 'text-dark hover:text-teal hover:bg-mist'
                                             }`}
                                     >
                                         {link.label}
@@ -84,7 +84,7 @@ export default function Navbar() {
                                 href={siteConfig.whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#22c55e] transition-all hover:shadow-md"
+                                className="flex items-center gap-2 bg-whatsapp text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#1eb856] transition-colors"
                             >
                                 <MessageCircle className="w-4 h-4" />
                                 WhatsApp
@@ -120,7 +120,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between p-5 border-b border-white/10">
                         <div className="flex items-center gap-2">
                             <img src="/logo.svg" alt="Chamok Fish Feed" className="h-10 w-10 bg-white rounded-lg p-1.5" />
-                            <p className="text-white font-bold text-lg font-[family-name:var(--font-bengali)]">চমক ফিশ ফিড</p>
+                            <p className="text-white font-semibold text-lg font-[family-name:var(--font-bengali)]">চমক ফিশ ফিড</p>
                         </div>
                         <button onClick={() => setIsMenuOpen(false)} className="text-white/70 hover:text-white transition-colors">
                             <X size={22} />
@@ -134,7 +134,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.href}
                                     to={link.href}
-                                    className={`flex items-center px-6 py-3.5 text-base font-medium transition-all font-[family-name:var(--font-bengali)] ${isActive
+                                    className={`flex items-center px-6 py-3.5 text-base font-medium transition-colors font-[family-name:var(--font-bengali)] ${isActive
                                         ? 'text-gold bg-white/10 border-r-2 border-gold'
                                         : 'text-white/80 hover:text-white hover:bg-white/5'
                                         }`}
@@ -154,7 +154,7 @@ export default function Navbar() {
                             href={siteConfig.whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-semibold py-3 rounded-xl transition-all hover:bg-[#22c55e]"
+                            className="flex items-center justify-center gap-2 w-full bg-whatsapp text-white font-semibold py-3 rounded-lg transition-colors hover:bg-[#1eb856]"
                         >
                             <MessageCircle className="w-5 h-5" />
                             WhatsApp-এ মেসেজ করুন

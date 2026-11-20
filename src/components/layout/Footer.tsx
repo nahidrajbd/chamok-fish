@@ -20,11 +20,11 @@ export default function Footer() {
                     {/* Column 1 */}
                     <div className="space-y-5">
                         <Link to="/" className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2 shadow-lg shrink-0">
+                            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2 shrink-0">
                                 <img src="/logo.svg" alt="Chamok Fish Feed" className="w-full h-full object-contain" />
                             </div>
                             <div>
-                                <p className="text-white font-bold text-lg leading-tight font-[family-name:var(--font-bengali)]">
+                                <p className="text-white font-semibold text-lg leading-tight font-[family-name:var(--font-bengali)]">
                                     চমক ফিশ ফিড
                                 </p>
                                 <p className="text-white text-xs opacity-60">Best Padma Agro Feeds</p>
@@ -38,7 +38,7 @@ export default function Footer() {
                                 href={siteConfig.social.facebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="Facebook"
                             >
                                 <Facebook className="w-4 h-4" />
@@ -47,7 +47,7 @@ export default function Footer() {
                                 href={siteConfig.social.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#E1306C] flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="Instagram"
                             >
                                 <Instagram className="w-4 h-4" />
@@ -56,7 +56,7 @@ export default function Footer() {
                                 href={siteConfig.social.youtube}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#FF0000] flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="YouTube"
                             >
                                 <Youtube className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function Footer() {
                                 href={siteConfig.social.x}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-black flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="X (Twitter)"
                             >
                                 <Twitter className="w-4 h-4" />
@@ -74,7 +74,7 @@ export default function Footer() {
                                 href={siteConfig.social.pinterest}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#E60023] flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="Pinterest"
                             >
                                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -85,7 +85,7 @@ export default function Footer() {
                                 href={siteConfig.whatsappUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-colors"
+                                className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                 aria-label="WhatsApp"
                             >
                                 <Phone className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                                <MapPin className="w-4 h-4 text-teal mt-0.5 shrink-0" />
                                 <div>
                                     <p className="text-white/50 text-xs mb-0.5">কারখানা</p>
                                     <p className="text-white/75 text-sm leading-relaxed font-[family-name:var(--font-bengali)]">

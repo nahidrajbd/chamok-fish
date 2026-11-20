@@ -151,27 +151,15 @@ export default function DealerOfferPage() {
             <Seo title="ডিলার আবেদন | Become a Fish Feed Dealer, Chamok Fish Feed" description="চমক ফিশ ফিডের ডিলার হওয়ার জন্য আবেদন করুন। আপনার ব্যক্তিগত ও ব্যবসায়িক তথ্য পূরণ করে সাবমিট করুন।" path="/dealer-offer" />
 
             {/* ── Hero ──────────────────────────────────────────────────── */}
-            <section className="bg-navy py-20 relative overflow-hidden">
-                <div
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                        backgroundImage:
-                            'radial-gradient(circle at 15% 50%, #2A8A8A 0%, transparent 50%), radial-gradient(circle at 85% 30%, #FFB703 0%, transparent 50%)',
-                    }}
-                />
-                <div className="container-custom text-center relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h1 className="text-white font-bold mb-4 font-[family-name:var(--font-bengali)]">
-                            ডিলার হওয়ার আবেদন করুন
-                        </h1>
-                        <p className="text-white/65 max-w-2xl mx-auto font-[family-name:var(--font-bengali)] leading-relaxed">
-                            নিচের ফর্মটি পূরণ করুন। আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে।
-                        </p>
-                    </motion.div>
+            <section className="bg-navy py-16">
+                <div className="container-custom text-center">
+                    <div className="w-8 h-[3px] bg-gold rounded-full mb-5 mx-auto" />
+                    <h1 className="text-white font-semibold mb-4 font-[family-name:var(--font-bengali)]">
+                        ডিলার হওয়ার আবেদন করুন
+                    </h1>
+                    <p className="text-white/70 max-w-2xl mx-auto font-[family-name:var(--font-bengali)] leading-relaxed">
+                        নিচের ফর্মটি পূরণ করুন। আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে।
+                    </p>
                 </div>
             </section>
 
@@ -188,7 +176,7 @@ export default function DealerOfferPage() {
                                 exit={{ opacity: 0 }}
                                 className="max-w-lg mx-auto text-center"
                             >
-                                <div className="bg-cardBg rounded-2xl p-10 border border-border/40 shadow-lg">
+                                <div className="bg-white rounded-xl p-10 border border-navy/10">
                                     <div className="w-20 h-20 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <CheckCircle2 className="w-10 h-10 text-teal" />
                                     </div>

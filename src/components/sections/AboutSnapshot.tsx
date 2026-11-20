@@ -1,57 +1,35 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import feedsPond from '@/images/feeds-pond.jpg';
 
 export default function AboutSnapshot() {
     return (
-        <section className="section-padding bg-panelBg">
+        <section className="section-padding bg-pageBg">
             <div className="container-custom">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="relative"
-                    >
-                        {/* Factory Image */}
-                        <div className="aspect-[4/3] rounded-card overflow-hidden shadow-lg border border-border/40 group relative">
+                    {/* Mill photo with a plain caption strip */}
+                    <div className="rounded-xl overflow-hidden border border-navy/10 bg-white">
+                        <div className="aspect-[4/3]">
                             <img
                                 src={feedsPond}
                                 alt="Chamok Fish Feed Pond"
                                 loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                            <div className="absolute bottom-6 left-6 z-10">
-                                <p className="font-bold text-lg font-[family-name:var(--font-bengali)] text-white">ইনাম ফিড মিল</p>
-                                <p className="text-white/80 text-xs mt-1">ধোপাপাড়া, পুঠিয়া, রাজশাহী</p>
-                            </div>
                         </div>
-                        {/* Experience Badge */}
-                        <div className="absolute -top-4 -right-4 bg-teal text-white font-bold px-5 py-3 rounded-xl shadow-lg border border-white/20 z-20">
-                            <p className="text-2xl leading-none">১০+</p>
-                            <p className="text-xs mt-0.5 opacity-90 font-[family-name:var(--font-bengali)]">বছরের অভিজ্ঞতা</p>
+                        <div className="px-5 py-4">
+                            <p className="font-semibold text-navy font-[family-name:var(--font-bengali)]">ইনাম ফিড মিল</p>
+                            <p className="text-bodyGray text-sm mt-0.5 font-[family-name:var(--font-bengali)]">ধোপাপাড়া, পুঠিয়া, রাজশাহী</p>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.15 }}
-                        className="space-y-6"
-                    >
+                    <div className="space-y-6">
                         <div>
-                            <span className="inline-block bg-teal/10 text-teal text-sm font-medium px-4 py-1.5 rounded-full mb-4 font-[family-name:var(--font-bengali)]">
-                                আমাদের সম্পর্কে
-                            </span>
-                            <h2 className="text-navy mb-4 font-[family-name:var(--font-bengali)]">বেস্ট পদ্মা এগ্রো ফিডস</h2>
+                            <div className="w-8 h-[3px] bg-gold rounded-full mb-4" />
+                            <h2 className="text-navy font-semibold font-[family-name:var(--font-bengali)]">বেস্ট পদ্মা এগ্রো ফিডস</h2>
                         </div>
 
-                        {/* Segmented Text */}
                         <div className="space-y-4 text-bodyGray font-[family-name:var(--font-bengali)] text-base">
                             <p className="leading-relaxed">
                                 বেস্ট পদ্মা এগ্রো ফিডস-এর গর্বিত উদ্যোগ হিসেবে, <span className="text-navy font-semibold">চমক ফিশ ফিড</span> বাংলাদেশের মৎস্য চাষ শিল্পে এক নতুন দিগন্ত উন্মোচন করছে।
@@ -64,7 +42,7 @@ export default function AboutSnapshot() {
                             </p>
                         </div>
 
-                        {/* Quick Stats Grid */}
+                        {/* Quick facts */}
                         <div className="grid grid-cols-2 gap-4 pt-2">
                             {[
                                 { label: 'অফিস', value: siteConfig.officeAddress },
@@ -72,8 +50,8 @@ export default function AboutSnapshot() {
                                 { label: 'প্রতিষ্ঠাতা', value: siteConfig.founder },
                                 { label: 'যোগাযোগ', value: siteConfig.phoneDisplay },
                             ].map((item) => (
-                                <div key={item.label} className="bg-mist/30 rounded-xl p-4 border border-border/40 hover:bg-mist/60 transition-colors">
-                                    <p className="text-teal text-xs font-medium mb-1 font-[family-name:var(--font-bengali)]">{item.label}</p>
+                                <div key={item.label} className="bg-white rounded-lg p-4 border border-navy/10">
+                                    <p className="text-bodyGray text-xs font-medium mb-1 font-[family-name:var(--font-bengali)]">{item.label}</p>
                                     <p className="text-navy text-sm font-semibold font-[family-name:var(--font-bengali)]">{item.value}</p>
                                 </div>
                             ))}
@@ -85,7 +63,7 @@ export default function AboutSnapshot() {
                                 <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, Package, TrendingUp, Droplets, Package2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { products, ProductSpec } from '@/data/products';
 
 // Show the 2 chamok featured products on the homepage
@@ -9,68 +8,53 @@ const getHomePageProducts = () => {
     return products.filter(p => targetIds.includes(p.id));
 };
 
+// Specs are set like the printed label on a feed sack: label left, value right,
+// hairline rules between rows. This is the homepage's signature detail.
+const SpecRow = ({ label, value }: { label: string; value: string }) => (
+    <div className="flex items-baseline justify-between gap-4 py-2.5">
+        <span className="text-bodyGray text-sm font-[family-name:var(--font-bengali)]">{label}</span>
+        <span className="text-navy font-semibold tabular-nums font-[family-name:var(--font-bengali)]">{value}</span>
+    </div>
+);
+
 const HorizontalProductCard = ({ product }: { product: ProductSpec }) => {
+    const protein = product.protein.general || product.protein.tilapia || product.protein.carp || 25;
     return (
-        <div className="bg-cardBg rounded-card border border-border/40 overflow-hidden card-hover shadow-sm grid grid-cols-1 md:grid-cols-5 h-full">
-            {/* Column 1: Photo (Portrait) - spans 2 cols on desktop */}
-            <div className="md:col-span-2 relative h-64 md:h-auto bg-mist/20">
+        <div className="bg-white rounded-xl border border-navy/10 overflow-hidden grid grid-cols-1 md:grid-cols-5 h-full">
+            {/* Photo */}
+            <div className="md:col-span-2 relative h-64 md:h-auto bg-pageBg">
                 <img
                     src={product.image}
                     alt={product.nameBn}
-                    className="w-full h-full object-contain p-4"
+                    className="w-full h-full object-contain p-6"
                     loading="lazy"
                 />
-                <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="bg-navy text-white text-xs font-semibold px-2.5 py-1 rounded-full font-[family-name:var(--font-bengali)]">
-                        {product.brand === 'chamok' ? 'চমক' : 'বায়োটেক'}
-                    </span>
-                </div>
             </div>
 
-            {/* Column 2: Product Information - spans 3 cols on desktop */}
+            {/* Information */}
             <div className="md:col-span-3 p-6 flex flex-col justify-center">
-                <div className="mb-4">
-                    <h3 className="text-navy font-bold text-2xl mb-2 font-[family-name:var(--font-bengali)]">{product.nameBn}</h3>
-                    <p className="text-bodyGray text-sm leading-relaxed font-[family-name:var(--font-bengali)]">
-                        {product.descriptionBn}
-                    </p>
+                <p className="text-teal text-sm font-medium mb-1 font-[family-name:var(--font-bengali)]">
+                    {product.brand === 'chamok' ? 'চমক' : 'বায়োটেক'}
+                </p>
+                <h3 className="text-navy font-semibold text-2xl mb-2 font-[family-name:var(--font-bengali)]">{product.nameBn}</h3>
+                <p className="text-bodyGray text-sm leading-relaxed font-[family-name:var(--font-bengali)]">
+                    {product.descriptionBn}
+                </p>
+
+                {/* Bag label specs */}
+                <div className="mt-5 border-t border-navy/10 divide-y divide-navy/10">
+                    <SpecRow label="প্রোটিন" value={`${protein}%`} />
+                    <SpecRow label="ফ্যাট" value={`${product.fat}%`} />
+                    <SpecRow label="প্যাকিং" value={`${product.packKg} কেজি`} />
+                    <SpecRow
+                        label="ফিড টাইপ"
+                        value={product.feedType === 'floating' ? 'ভাসমান' : product.feedType === 'sinking' ? 'ডুবন্ত' : 'ম্যাশ'}
+                    />
                 </div>
 
-                {/* Specs Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-pageBg rounded-lg p-3 border border-border/30">
-                        <span className="text-bodyGray text-xs flex items-center gap-1.5 mb-1 font-[family-name:var(--font-bengali)]">
-                            <TrendingUp className="w-3.5 h-3.5 text-teal" /> প্রোটিন
-                        </span>
-                        <span className="text-teal font-bold text-lg">
-                            {product.protein.general || product.protein.tilapia || product.protein.carp || 25}%
-                        </span>
-                    </div>
-                    <div className="bg-pageBg rounded-lg p-3 border border-border/30">
-                        <span className="text-bodyGray text-xs flex items-center gap-1.5 mb-1 font-[family-name:var(--font-bengali)]">
-                            <Droplets className="w-3.5 h-3.5 text-steel" /> ফ্যাট
-                        </span>
-                        <span className="text-steel font-bold text-lg">{product.fat}%</span>
-                    </div>
-                    <div className="bg-pageBg rounded-lg p-3 border border-border/30">
-                        <span className="text-bodyGray text-xs flex items-center gap-1.5 mb-1 font-[family-name:var(--font-bengali)]">
-                            <Package2 className="w-3.5 h-3.5 text-bodyGray" /> প্যাকিং
-                        </span>
-                        <span className="text-navy font-bold text-lg font-[family-name:var(--font-bengali)]">{product.packKg} কেজি</span>
-                    </div>
-                    <div className="bg-pageBg rounded-lg p-3 border border-border/30">
-                        <span className="text-bodyGray text-xs flex items-center gap-1.5 mb-1 font-[family-name:var(--font-bengali)]">
-                            ফিড টাইপ
-                        </span>
-                        <span className="text-navy font-bold text-lg font-[family-name:var(--font-bengali)]">
-                            {product.feedType === 'floating' ? 'ভাসমান' : product.feedType === 'sinking' ? 'ডুবন্ত' : 'ম্যাশ'}
-                        </span>
-                    </div>
-                </div>
-
-                <Link to="/contact" className="btn-teal inline-flex justify-center w-full sm:w-auto font-[family-name:var(--font-bengali)]">
+                <Link to="/contact" className="btn-teal inline-flex justify-center w-full sm:w-auto mt-6 font-[family-name:var(--font-bengali)]">
                     অর্ডার করতে যোগাযোগ করুন
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4" />
                 </Link>
             </div>
         </div>
@@ -81,38 +65,25 @@ export default function FeaturedProducts() {
     const productsToShow = getHomePageProducts();
 
     return (
-        <section className="section-padding bg-mist/40">
+        <section className="section-padding bg-pageBg">
             <div className="container-custom">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10"
-                >
+                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
                     <div>
-                        <span className="inline-flex items-center gap-2 bg-teal/10 text-teal text-sm font-medium px-4 py-1.5 rounded-full mb-3 font-[family-name:var(--font-bengali)]">
-                            <Package className="w-4 h-4" />
-                            আমাদের পণ্য
-                        </span>
-                        <h2 className="text-navy font-[family-name:var(--font-bengali)]">জনপ্রিয় পণ্যসমূহ</h2>
+                        <div className="w-8 h-[3px] bg-gold rounded-full mb-4" />
+                        <h2 className="text-navy font-semibold font-[family-name:var(--font-bengali)]">জনপ্রিয় পণ্যসমূহ</h2>
                     </div>
-                    <Link to="/products" className="btn-teal-outline text-sm whitespace-nowrap font-[family-name:var(--font-bengali)]">
+                    <Link
+                        to="/products"
+                        className="inline-flex items-center gap-2 text-teal font-semibold text-sm whitespace-nowrap hover:text-[#236f6f] transition-colors font-[family-name:var(--font-bengali)]"
+                    >
                         সব পণ্য দেখুন
                         <ArrowRight className="w-4 h-4" />
                     </Link>
-                </motion.div>
+                </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {productsToShow.map((product, i) => (
-                        <motion.div
-                            key={product.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1, duration: 0.5 }}
-                        >
-                            <HorizontalProductCard product={product} />
-                        </motion.div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {productsToShow.map((product) => (
+                        <HorizontalProductCard key={product.id} product={product} />
                     ))}
                 </div>
             </div>

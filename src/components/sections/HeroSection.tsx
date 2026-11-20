@@ -1,90 +1,62 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 import { siteConfig } from '@/data/siteConfig';
 
 export default function HeroSection() {
     return (
-        <section className="relative h-screen flex items-center overflow-hidden bg-navy">
-            {/* Background Image with Overlay */}
+        <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-navy">
+            {/* Background photo with a flat navy scrim for legibility */}
             <div className="absolute inset-0">
                 <img
                     src="/hero-banner.jpg"
                     alt="Fish feeding in a pond"
                     className="w-full h-full object-cover object-bottom"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/60 to-transparent" />
+                <div className="absolute inset-0 bg-navy/70" />
             </div>
 
-            {/* Decorative blurs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-10 left-10 w-96 h-96 bg-teal/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-10 right-10 w-80 h-80 bg-gold/10 rounded-full blur-3xl animate-pulse delay-1000" />
-            </div>
-
-            <div className="container-custom relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className="text-center lg:text-left"
+            <div className="container-custom relative z-10 py-24">
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className="max-w-2xl text-center lg:text-left"
+                >
+                    <div className="w-8 h-[3px] bg-gold rounded-full mb-6 mx-auto lg:mx-0" />
+                    <h1
+                        className="text-white font-semibold leading-[1.15] mb-5 font-[family-name:var(--font-bengali)]"
+                        style={{ fontSize: 'clamp(40px, 5.5vw, 64px)' }}
                     >
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3, duration: 0.7 }}
-                            className="text-white font-extrabold leading-[1.1] mb-6 font-[family-name:var(--font-bengali)] drop-shadow-lg"
-                            style={{ fontSize: 'clamp(48px, 6vw, 96px)' }}
-                        >
-                            চমক ফিশ ফিড
-                        </motion.h1>
+                        চমক ফিশ ফিড
+                    </h1>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4, duration: 0.7 }}
-                            className="text-gold font-bold text-2xl mb-6 font-[family-name:var(--font-bengali)] drop-shadow-md"
-                        >
-                            {siteConfig.tagline}
-                        </motion.p>
+                    <p className="text-white/85 font-medium text-xl md:text-2xl mb-5 font-[family-name:var(--font-bengali)]">
+                        {siteConfig.tagline}
+                    </p>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5, duration: 0.7 }}
-                            className="text-white/90 text-xl leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-[family-name:var(--font-bengali)] drop-shadow-md font-medium"
-                        >
-                            রাজশাহীর ইনাম ফিড মিল থেকে উৎপাদিত উচ্চমানের মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি ভাসমান ও ডুবন্ত ফিড।
-                        </motion.p>
+                    <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 font-[family-name:var(--font-bengali)]">
+                        রাজশাহীর ইনাম ফিড মিল থেকে উৎপাদিত মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য ভাসমান ও ডুবন্ত ফিড।
+                    </p>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6, duration: 0.7 }}
-                            className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <Link
+                            to="/products"
+                            className="bg-gold hover:bg-[#e6a502] text-navy font-semibold text-lg px-8 py-3.5 rounded-lg inline-flex items-center justify-center gap-2 transition-colors font-[family-name:var(--font-bengali)]"
                         >
-                            <Link to="/products" className="bg-gold hover:bg-white text-navy font-bold text-lg px-10 py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_4px_14px_0_rgba(255,183,3,0.39)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.23)] hover:-translate-y-1 font-[family-name:var(--font-bengali)]">
-                                আমাদের পণ্য দেখুন
-                                <ArrowRight className="w-5 h-5" />
-                            </Link>
-                        </motion.div>
-                    </motion.div>
-
-                    <div className="hidden lg:block"></div>
-                </div>
+                            আমাদের পণ্য দেখুন
+                            <ArrowRight className="w-5 h-5" />
+                        </Link>
+                        <Link
+                            to="/dealer-offer"
+                            className="border border-white/40 hover:bg-white/10 text-white font-semibold text-lg px-8 py-3.5 rounded-lg inline-flex items-center justify-center transition-colors font-[family-name:var(--font-bengali)]"
+                        >
+                            ডিলার হতে আবেদন করুন
+                        </Link>
+                    </div>
+                </motion.div>
             </div>
-
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 flex flex-col items-center gap-2 pointer-events-none"
-            >
-                <span className="text-xs font-[family-name:var(--font-bengali)] tracking-widest uppercase">Scroll Down</span>
-                <ChevronDown className="w-6 h-6 animate-bounce" />
-            </motion.div>
         </section>
     );
 }

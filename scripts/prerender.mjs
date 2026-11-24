@@ -50,7 +50,10 @@ function pageHtml(url) {
 }
 
 for (const url of routes) {
-    const out = url === '/' ? join(DIST, 'index.html') : join(DIST, url.replace(/^\//, ''), 'index.html');
+    // Flat .html files: Cloudflare Pages serves them at the extensionless
+    // path with a 200, matching the site's slash-free canonicals. Directory
+    // index files would 308-redirect every URL to a trailing-slash form.
+    const out = url === '/' ? join(DIST, 'index.html') : join(DIST, `${url.replace(/^\//, '')}.html`);
     mkdirSync(dirname(out), { recursive: true });
     writeFileSync(out, pageHtml(url));
     console.log('pre-rendered', url);

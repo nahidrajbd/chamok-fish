@@ -1,4 +1,5 @@
 import Seo from '@/components/Seo';
+import { itemListJsonLd } from '@/data/jsonLd';
 import { useState } from 'react';
 import { Download } from 'lucide-react';
 import { ProductCard } from '@/components/products/ProductCard';
@@ -18,7 +19,7 @@ export default function ProductsPage() {
 
     return (
         <>
-            <Seo title="ফিশ ফিড পণ্যসমূহ | Fish Feed Products, Chamok Fish Feed" description="চমক ও বায়োটেক ব্র্যান্ডের ভাসমান ও ডুবন্ত মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি।" path="/products" />
+            <Seo title="ফিশ ফিড পণ্যসমূহ | Fish Feed Products, Chamok Fish Feed" description="চমক ও বায়োটেক ব্র্যান্ডের ভাসমান ও ডুবন্ত মৎস্য খাদ্য। কার্প, তেলাপিয়া ও পাঙ্গাস মাছের জন্য বিশেষভাবে তৈরি।" path="/products" jsonLd={itemListJsonLd} />
 
             {/* Header */}
             <section className="bg-navy py-16">

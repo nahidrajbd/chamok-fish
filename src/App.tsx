@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from '@/components/ui/sonner';
 import Navbar from '@/components/layout/Navbar';
@@ -18,7 +18,7 @@ import ScrollToTop from '@/components/layout/ScrollToTop';
 export default function App() {
     return (
         <HelmetProvider>
-            <BrowserRouter>
+            <>
                 <ScrollToTop />
                 <Navbar />
                 <main className="pt-16 lg:pt-20">
@@ -37,7 +37,7 @@ export default function App() {
                 <Footer />
                 <WhatsAppFAB />
                 <Toaster richColors position="top-right" />
-            </BrowserRouter>
+            </>
         </HelmetProvider>
     );
 }

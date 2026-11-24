@@ -7,4 +7,9 @@ export default defineConfig({
     resolve: {
         alias: { '@': path.resolve(__dirname, './src') },
     },
+    ssr: {
+        // react-helmet-async ships CommonJS only; bundle it into the SSR
+        // build so the prerender can import its named exports.
+        noExternal: ['react-helmet-async'],
+    },
 });

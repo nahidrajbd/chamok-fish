@@ -2,5 +2,6 @@
 /products/chamak-carp-grower /products/chamok-carp-grower 301
 /products/chamak-floating-feed /products/chamok-floating-feed 301
 
-# SPA routing for Cloudflare Pages
-/*    /index.html   200
+# No SPA fallback: every public route is pre-rendered to a real file at
+# build time, and Cloudflare Pages serves 404.html with a real 404 status
+# for anything else.

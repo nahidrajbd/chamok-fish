@@ -1,6 +1,8 @@
 import { siteConfig } from '@/data/siteConfig';
 import type { ProductSpec } from '@/data/products';
 import { products } from '@/data/products';
+import { faqs } from '@/data/faq';
+import { guides } from '@/data/guides';
 
 const sameAs = [
     siteConfig.social.facebook,
@@ -144,6 +146,30 @@ export const itemListJsonLd = {
         position: i + 1,
         name: `${p.nameBn} (${p.nameEn})`,
         url: `${siteConfig.siteUrl}/products/${p.id}`,
+    })),
+};
+
+/** FAQPage schema for /faq, built from the same data the page renders. */
+export const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+};
+
+/** ItemList schema for the /guides listing page. */
+export const guidesItemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Chamok Fish Feed Guides',
+    itemListElement: guides.map((g, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: g.title,
+        url: `${siteConfig.siteUrl}/guides/${g.slug}`,
     })),
 };
 

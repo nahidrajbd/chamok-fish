@@ -7,6 +7,8 @@ const quickLinks = [
     { href: '/products', label: 'পণ্যসমূহ' },
     { href: '/about', label: 'আমাদের সম্পর্কে' },
     { href: '/dealers', label: 'ডিলার নেটওয়ার্ক' },
+    { href: '/guides', label: 'মাছ চাষ গাইড' },
+    { href: '/faq', label: 'সাধারণ জিজ্ঞাসা' },
     { href: '/contact', label: 'যোগাযোগ' },
 ];
 

@@ -12,6 +12,9 @@ import CeoPage from '@/pages/CeoPage';
 import DealersPage from '@/pages/DealersPage';
 import ContactPage from '@/pages/ContactPage';
 import DealerOfferPage from '@/pages/DealerOfferPage';
+import FaqPage from '@/pages/FaqPage';
+import GuidesPage from '@/pages/GuidesPage';
+import GuideDetailPage from '@/pages/GuideDetailPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 import ScrollToTop from '@/components/layout/ScrollToTop';
 
@@ -31,6 +34,9 @@ export default function App() {
                         <Route path="/dealers" element={<DealersPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/dealer-offer" element={<DealerOfferPage />} />
+                        <Route path="/faq" element={<FaqPage />} />
+                        <Route path="/guides" element={<GuidesPage />} />
+                        <Route path="/guides/:slug" element={<GuideDetailPage />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </main>

@@ -1,5 +1,6 @@
 import { siteConfig } from '@/data/siteConfig';
 import { products } from '@/data/products';
+import { guides } from '@/data/guides';
 
 export interface RouteMeta {
     title: string;
@@ -45,7 +46,23 @@ export const routesMeta: Record<string, RouteMeta> = {
         title: 'ডিলার আবেদন | Become a Fish Feed Dealer, Chamok Fish Feed',
         description: 'চমক ফিশ ফিডের ডিলার হওয়ার জন্য আবেদন করুন। আপনার ব্যক্তিগত ও ব্যবসায়িক তথ্য পূরণ করে সাবমিট করুন।',
     },
+    '/faq': {
+        title: 'সাধারণ জিজ্ঞাসা | Fish Feed FAQ, Chamok Fish Feed',
+        description: 'FCR, ভাসমান ও ডুবন্ত ফিড, খাবারের পরিমাণ, দাম, ডিলার ও ফিড সংরক্ষণ নিয়ে চাষিদের সাধারণ প্রশ্নের উত্তর।',
+    },
+    '/guides': {
+        title: 'মাছ চাষ গাইড | Fish Farming Guides, Chamok Fish Feed',
+        description: 'FCR হিসাব, ভাসমান ও ডুবন্ত ফিড, খাবারের পরিমাণ, পোনার ফিড, সংরক্ষণ ও পিলেট সাইজ নিয়ে সহজ গাইড।',
+    },
 };
+
+for (const g of guides) {
+    routesMeta[`/guides/${g.slug}`] = {
+        title: `${g.title} | চমক ফিশ ফিড`,
+        description: g.cardLine,
+        type: 'article',
+    };
+}
 
 const imageStems: Record<string, string> = {
     'chamok-carp-grower': 'chamok-carp-grower',

@@ -8,6 +8,8 @@ const navLinks = [
     { href: '/products', label: 'পণ্যসমূহ' },
     { href: '/about', label: 'আমাদের সম্পর্কে' },
     { href: '/dealers', label: 'ডিলার নেটওয়ার্ক' },
+    { href: '/guides', label: 'গাইড' },
+    { href: '/faq', label: 'জিজ্ঞাসা' },
     { href: '/contact', label: 'যোগাযোগ' },
 ];
 
